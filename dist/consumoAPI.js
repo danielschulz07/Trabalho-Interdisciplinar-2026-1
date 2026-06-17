@@ -12,6 +12,16 @@ class consumoAPI {
             throw new SyntaxError(`HTTP error! Status: ${response.status}`);
         }
     }
+    static async consultaBioma(bioma) {
+        const url = `https://api.astroworldmc.com/api/v1/biomes?search=${bioma}`;
+        const response = await fetch(url);
+        if (response.ok) {
+            return response.json();
+        }
+        else {
+            throw new SyntaxError(`HTTP error! Status: ${response.status}`);
+        }
+    }
 }
 exports.consumoAPI = consumoAPI;
 //# sourceMappingURL=consumoAPI.js.map
