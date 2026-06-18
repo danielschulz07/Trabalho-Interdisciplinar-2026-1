@@ -1,4 +1,5 @@
 import { consumoAPI } from "./consumoAPI";
+import { Mobs } from "./Mobs";
 
 async function main() {
     const mob = await consumoAPI.consultaMob("zomb");
@@ -12,3 +13,5 @@ async function main() {
 }
 
 main();
+
+const mob = new Mobs("aaa", "sda", 2, "144", )
