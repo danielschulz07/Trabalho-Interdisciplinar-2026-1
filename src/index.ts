@@ -1,1 +1,0 @@
-import { BiomaController } from "./biomaController";

@@ -1,30 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.iomaController = void 0;
-exports.criaBiomas = criaBiomas;
+exports.BiomaController = void 0;
 const consumoAPI_1 = require("./consumoAPI");
 const Bioma_1 = require("./Bioma");
-class iomaController {
+class BiomaController {
+    static _vetBiomas = [];
+    static async criaBiomas() {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const dadosBioma = await consumoAPI_1.consumoAPI.consultaBioma(""); // passo essa const para o index, pq isso e a view, ai passa o JSON no parametro da função que pega pela view
+                dadosBioma.data.forEach((novoBioma) => {
+                    const biomaRetornado = novoBioma;
+                    const novoBiomaCriado = new Bioma_1.Bioma(biomaRetornado.name, biomaRetornado.dimension, biomaRetornado.category);
+                    BiomaController._vetBiomas.push(novoBiomaCriado);
+                });
+            }
+            catch (error) {
+                reject(error);
+            }
+        });
+    }
 }
-exports.iomaController = iomaController;
-const vetBiomas = []; //esse vetor deve ficar no controller;
-async function criaBiomas() {
-    return new Promise(async (resolve, reject) => {
-        try {
-            const dadosBioma = await consumoAPI_1.consumoAPI.consultaBioma("");
-            dadosBioma.data.forEach((novoBioma) => {
-                const biomaRetornado = novoBioma;
-                const novoBiomaCriado = new Bioma_1.Bioma(biomaRetornado.name, biomaRetornado.dimension, biomaRetornado.category);
-                vetBiomas.push(novoBiomaCriado);
-            });
-            console.log(vetBiomas);
-            //resolve(novoBioma)
-            //console.log(novoBioma)
-        }
-        catch (error) {
-            reject(error);
-        }
-    });
-}
-criaBiomas();
+exports.BiomaController = BiomaController;
 //# sourceMappingURL=biomaController.js.map
