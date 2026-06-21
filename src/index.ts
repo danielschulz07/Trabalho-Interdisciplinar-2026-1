@@ -1,5 +1,10 @@
-import { consumoAPI } from "./consumoAPI";
+
+import { Bioma } from "./Bioma";
 import { Mobs } from "./Mobs";
+import { BiomaController } from "./biomaController";
+//import { IPesquisavel } from "./IPesquisavel";
+import { consumoAPI } from "./consumoAPI";
+
 
 async function main() {
     const mob = await consumoAPI.consultaMob("zomb");
@@ -11,7 +16,4 @@ async function main() {
 
     console.log(bioma)
 }
-
 main();
-
-const mob = new Mobs("aaa", "sda", 2, "144", )
