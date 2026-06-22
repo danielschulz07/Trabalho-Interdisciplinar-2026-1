@@ -1,15 +1,10 @@
 "use strict";
-<<<<<<< HEAD
-=======
 Object.defineProperty(exports, "__esModule", { value: true });
-//import { IPesquisavel } from "./IPesquisavel";
-const consumoAPI_1 = require("./consumoAPI");
+const biomaController_1 = require("./biomaController");
 async function main() {
-    const mob = await consumoAPI_1.consumoAPI.consultaMob("zomb");
-    console.log(mob);
-    const bioma = await consumoAPI_1.consumoAPI.consultaBioma("desert");
-    console.log(bioma);
+    await biomaController_1.BiomaController.carregarBiomas();
+    //await Service.carregaMobs();
+    //console.log(Service.listarMobs())
 }
 main();
->>>>>>> main
 //# sourceMappingURL=index.js.map

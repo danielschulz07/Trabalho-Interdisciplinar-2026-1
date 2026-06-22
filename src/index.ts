@@ -1,22 +1,21 @@
-<<<<<<< HEAD
-=======
-
 import { Bioma } from "./Bioma";
-import { Mobs } from "./Mobs";
+import { Mob } from "./Mob";
 import { BiomaController } from "./biomaController";
+import { MobController } from "./mobController";
 //import { IPesquisavel } from "./IPesquisavel";
-import { consumoAPI } from "./consumoAPI";
+import { Service } from "./Service";
+
 
 
 async function main() {
-    const mob = await consumoAPI.consultaMob("zomb");
-
-    console.log(mob);
-
-    const bioma = await consumoAPI.consultaBioma("desert")
 
 
-    console.log(bioma)
+    await BiomaController.carregarBiomas()
+
+
+    //await Service.carregaMobs();
+    //console.log(Service.listarMobs())
+
 }
+
 main();
->>>>>>> main

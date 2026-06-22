@@ -11,7 +11,7 @@ export class consumoAPI {
         }
     }
 
-        static async consultaBioma(bioma: string): Promise<JSON> {
+    static async consultaBioma(bioma: string): Promise<JSON> {
         const url = `https://api.astroworldmc.com/api/v1/biomes?search=${bioma}`
         const response: Response = await fetch(url);
 
@@ -21,4 +21,4 @@ export class consumoAPI {
             throw new SyntaxError(`HTTP error! Status: ${response.status}`);
         }
     }
-  } 
+} 

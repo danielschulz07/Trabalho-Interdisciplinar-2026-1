@@ -1,4 +1,4 @@
-export class Mobs {
+export class Mob {
     private static _idMob: number = 0;
     private _nome: string;
     private _tipo: string;
@@ -11,7 +11,7 @@ constructor(nome: string, tipo: string, vida: number, descricao: string){
         this._tipo = tipo;
         this._vida = vida;
         this._descricao = descricao;
-        Mobs._idMob++
+        Mob._idMob++
 }
 
     public static get idMob(): number {
@@ -55,9 +55,9 @@ constructor(nome: string, tipo: string, vida: number, descricao: string){
     }
 
     public toString(): string{
-     return '\n\t"nome" : "' + this._nome + '" ,' +
-            '\n\t"tipo" : "' + this._tipo + '" ,' +
-            '\n\t"vida" : "' + this._vida + '" ,' +
-            '\n\t"descricao" : "' + this._descricao + '"';
+     return '\n\t"Nome" : "' + this._nome + '" ,' +
+            '\n\t"Tipo" : "' + this._tipo + '" ,' +
+            '\n\t"Vida" : "' + this._vida + '" ,' +
+            '\n\t"Descricao" : "' + this._descricao + '"';
 }
 }
