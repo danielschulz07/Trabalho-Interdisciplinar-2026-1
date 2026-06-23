@@ -2,6 +2,8 @@ import { consumoAPI } from "./consumoAPI";
 import { Bioma } from "./Bioma";
 import { Repository } from "./Repository";
 import { Mob } from "./Mob";
+import { MobPassivo } from "./MobPassivo";
+import { MobHostil } from "./MobHostil";
 
 export class Service {
     static async carregarBiomas(): Promise<void> {
@@ -22,7 +24,12 @@ export class Service {
 
         const dados = await consumoAPI.consultaMob("");
         dados.data.forEach((mobs: any) => {
-            vetMobs.push(new Mob(mobs.name, mobs.type, mobs.hp, mobs.behavior))
+            if(mobs.type == "passive"){
+                vetMobs.push(new MobPassivo(mobs.name, mobs.type, mobs.hp, mobs.behavior));
+            }else if(mobs.type == "hostile"){
+                vetMobs.push(new MobHostil(mobs.name, mobs.type, mobs.hp, mobs.behavior, mobs.damage.normal))
+            }
+            
         });
         Repository.salvarMobs(vetMobs);
     }

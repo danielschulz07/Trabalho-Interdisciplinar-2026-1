@@ -1,6 +1,6 @@
-import { Mobs } from "./Mobs";
+import { Mob } from "./Mob";
 
-export class MobHostil extends Mobs{
+export class MobHostil extends Mob{
     private _dano: number;
 
     constructor(nome: string, tipo: string, vida: number, descricao: string, dano: number){

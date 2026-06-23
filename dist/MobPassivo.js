@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MobPassivo = void 0;
-const Mobs_1 = require("./Mobs");
-class MobPassivo extends Mobs_1.Mobs {
+const Mob_1 = require("./Mob");
+class MobPassivo extends Mob_1.Mob {
     constructor(nome, tipo, vida, descricao) {
         super(nome, tipo, vida, descricao);
     }

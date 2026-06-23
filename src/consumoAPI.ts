@@ -1,8 +1,7 @@
-import { IRespostaBiomaAPI, IRespostaMobAPI } from "./IPesquisavel";
 
 export class consumoAPI {
 
-    static async consultaMob(mob: string): Promise<IRespostaMobAPI> {
+    static async consultaMob(mob: string): Promise<JSON | any> {
         const url = `https://api.astroworldmc.com/api/v1/mobs?search=${mob}`
         const response: Response = await fetch(url);
 
@@ -14,7 +13,7 @@ export class consumoAPI {
     }
 
 
-static async consultaBioma(bioma: string): Promise<IRespostaBiomaAPI> {
+static async consultaBioma(bioma: string): Promise<JSON | any> {
     const url = `https://api.astroworldmc.com/api/v1/biomes?search=${bioma}`
     const response = await fetch(url);
 

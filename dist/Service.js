@@ -4,7 +4,8 @@ exports.Service = void 0;
 const consumoAPI_1 = require("./consumoAPI");
 const Bioma_1 = require("./Bioma");
 const Repository_1 = require("./Repository");
-const Mob_1 = require("./Mob");
+const MobPassivo_1 = require("./MobPassivo");
+const MobHostil_1 = require("./MobHostil");
 class Service {
     static async carregarBiomas() {
         const vetBiomas = [];
@@ -18,7 +19,12 @@ class Service {
         const vetMobs = [];
         const dados = await consumoAPI_1.consumoAPI.consultaMob("");
         dados.data.forEach((mobs) => {
-            vetMobs.push(new Mob_1.Mob(mobs.name, mobs.type, mobs.hp, mobs.behavior));
+            if (mobs.type == "passive") {
+                vetMobs.push(new MobPassivo_1.MobPassivo(mobs.name, mobs.type, mobs.hp, mobs.behavior));
+            }
+            else if (mobs.type == "hostile") {
+                vetMobs.push(new MobHostil_1.MobHostil(mobs.name, mobs.type, mobs.hp, mobs.behavior, mobs.damage.normal));
+            }
         });
         Repository_1.Repository.salvarMobs(vetMobs);
     }

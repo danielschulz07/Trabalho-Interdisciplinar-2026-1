@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MobHostil = void 0;
-const Mobs_1 = require("./Mobs");
-class MobHostil extends Mobs_1.Mobs {
+const Mob_1 = require("./Mob");
+class MobHostil extends Mob_1.Mob {
     _dano;
     constructor(nome, tipo, vida, descricao, dano) {
         super(nome, tipo, vida, descricao);
