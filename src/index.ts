@@ -1,20 +1,16 @@
-import { Bioma } from "./Bioma";
-import { Mob } from "./Mob";
 import { BiomaController } from "./biomaController";
 import { MobController } from "./mobController";
-//import { IPesquisavel } from "./IPesquisavel";
-import { Service } from "./Service";
-
-
+import { Repository } from "./Repository";
 
 async function main() {
 
+    //await BiomaController.carregarBiomas()
+    //console.log(Repository.listarBiomas())
 
-    await BiomaController.carregarBiomas()
+    await MobController.carregarMobs();
+    console.log(Repository.listarMobs())
 
 
-    //await Service.carregaMobs();
-    //console.log(Service.listarMobs())
 
 }
 

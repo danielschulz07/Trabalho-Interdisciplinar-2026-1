@@ -1,1 +1,1 @@
-{"version":3,"file":"biomaController.js","sourceRoot":"","sources":["../src/biomaController.ts"],"names":[],"mappings":";;;AAAA,uCAAoC;AAEpC,MAAa,eAAe;IAExB,MAAM,CAAC,KAAK,CAAC,cAAc;QACvB,MAAM,iBAAO,CAAC,cAAc,EAAE,CAAC;IACnC,CAAC;CAEJ;AAND,0CAMC"}
+{"version":3,"file":"biomaController.js","sourceRoot":"","sources":["../src/biomaController.ts"],"names":[],"mappings":";;;AAAA,uCAAoC;AAEpC,MAAa,eAAe;IACxB,MAAM,CAAC,KAAK,CAAC,cAAc;QACvB,MAAM,iBAAO,CAAC,cAAc,EAAE,CAAC;IACnC,CAAC;CAQJ;AAXD,0CAWC"}

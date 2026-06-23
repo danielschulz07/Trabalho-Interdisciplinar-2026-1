@@ -1,14 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MobController = void 0;
-const Mob_1 = require("./Mob");
+const Service_1 = require("./Service");
 class MobController {
-    static criaMobs(dadosMob) {
-        const vetMobs = [];
-        dadosMob.data.forEach((mob) => {
-            vetMobs.push(new Mob_1.Mob(mob.name, mob.type, mob.hp, mob.behavior));
-        });
-        return vetMobs;
+    static async carregarMobs() {
+        await Service_1.Service.carregarMobs();
     }
 }
 exports.MobController = MobController;
