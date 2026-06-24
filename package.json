@@ -1,4 +1,3 @@
-
 {
   "name": "projetots-contacliente",
   "version": "1.0.0",
@@ -7,9 +6,13 @@
   "scripts": {
     "start": "tsc src/index.ts",
     "watch": "tsc watch src",
-    "dev": "nodemon src/index.ts"  
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.22.5"
+  }
 }
