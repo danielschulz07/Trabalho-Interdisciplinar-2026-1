@@ -1,4 +1,6 @@
-export class Mob {
+import { IPesquisavel } from "./IPesquisavel";
+
+export class Mob implements IPesquisavel{
     private static _idMob: number = 0;
     private _nome: string;
     private _tipo: string;
@@ -60,4 +62,13 @@ constructor(nome: string, tipo: string, vida: number, descricao: string){
             '\n\t"Vida" : "' + this._vida + '" ,' +
             '\n\t"Descricao" : "' + this._descricao + '"';
 }
+
+    public atendeCriterio(criterio: string): boolean {
+        if(this.nome.toLowerCase().includes(criterio.toLowerCase()) ||
+           this.tipo.toLowerCase().includes(criterio.toLowerCase())){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
