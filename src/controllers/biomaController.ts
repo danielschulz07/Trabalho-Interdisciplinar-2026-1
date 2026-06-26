@@ -1,4 +1,4 @@
-import { Service } from "./Service";
+import { Service } from "../services/Service";
 
 export class BiomaController {
     static async carregarBiomas(): Promise<void> {

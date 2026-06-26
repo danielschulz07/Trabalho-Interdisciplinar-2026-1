@@ -1,5 +1,5 @@
-import { Bioma } from "./Bioma";
-import { Mob } from "./Mob";
+import { Bioma } from "../models/Bioma";
+import { Mob } from "../models/Mob";
 
 export class Repository {
 

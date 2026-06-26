@@ -1,9 +1,9 @@
-import { consumoAPI } from "./consumoAPI";
-import { Bioma } from "./Bioma";
-import { Repository } from "./Repository";
-import { Mob } from "./Mob";
-import { MobPassivo } from "./MobPassivo";
-import { MobHostil } from "./MobHostil";
+import { consumoAPI } from "../consumoAPI";
+import { Bioma } from "../models/Bioma";
+import { Repository } from "../repositories/Repository";
+import { Mob } from "../models/Mob";
+import { MobPassivo } from "../models/MobPassivo";
+import { MobHostil } from "../models/MobHostil";
 
 export class Service {
     static async carregarBiomas(): Promise<void> {

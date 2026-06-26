@@ -1,4 +1,4 @@
-import { Service } from "./Service";
+import { Service } from "../services/Service";
 
 export class MobController {
     static async carregarMobs(): Promise<void> {

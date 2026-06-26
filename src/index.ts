@@ -1,6 +1,6 @@
-import { BiomaController } from "./biomaController";
-import { MobController } from "./mobController";
-import { Repository } from "./Repository";
+import { BiomaController } from "./controllers/biomaController";
+import { MobController } from "./controllers/mobController";
+import { Repository } from "./repositories/Repository";
 
 async function main() {
 
