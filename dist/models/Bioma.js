@@ -25,6 +25,16 @@ class Bioma {
             "\nDimensão : " + this._dimensao +
             "\nCategoria : " + this._categoria;
     }
+    atendeCriterio(criterio) {
+        if (this.nome.toLowerCase().includes(criterio.toLowerCase()) ||
+            this.dimensao.toLowerCase().includes(criterio.toLowerCase()) ||
+            this.categoria.toLowerCase().includes(criterio.toLowerCase())) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 exports.Bioma = Bioma;
 //# sourceMappingURL=Bioma.js.map

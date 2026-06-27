@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Mobs = void 0;
-class Mobs {
+exports.Mob = void 0;
+class Mob {
     static _idMob = 0;
     _nome;
     _tipo;
@@ -12,7 +12,7 @@ class Mobs {
         this._tipo = tipo;
         this._vida = vida;
         this._descricao = descricao;
-        Mobs._idMob++;
+        Mob._idMob++;
     }
     static get idMob() {
         return this._idMob;
@@ -45,11 +45,20 @@ class Mobs {
         this.descricao = Novodescricao;
     }
     toString() {
-        return '\n\t"nome" : "' + this._nome + '" ,' +
-            '\n\t"tipo" : "' + this._tipo + '" ,' +
-            '\n\t"vida" : "' + this._vida + '" ,' +
-            '\n\t"descricao" : "' + this._descricao + '"';
+        return '\n\t"Nome" : "' + this._nome + '" ,' +
+            '\n\t"Tipo" : "' + this._tipo + '" ,' +
+            '\n\t"Vida" : "' + this._vida + '" ,' +
+            '\n\t"Descricao" : "' + this._descricao + '"';
+    }
+    atendeCriterio(criterio) {
+        if (this.nome.toLowerCase().includes(criterio.toLowerCase()) ||
+            this.tipo.toLowerCase().includes(criterio.toLowerCase())) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
-exports.Mobs = Mobs;
-//# sourceMappingURL=Mobs.js.map
+exports.Mob = Mob;
+//# sourceMappingURL=Mob.js.map

@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Service = void 0;
-const consumoAPI_1 = require("./consumoAPI");
-const Bioma_1 = require("./Bioma");
-const Repository_1 = require("./Repository");
-const MobPassivo_1 = require("./MobPassivo");
-const MobHostil_1 = require("./MobHostil");
+const consumoAPI_1 = require("../models/consumoAPI");
+const Bioma_1 = require("../models/Bioma");
+const Repository_1 = require("../repositories/Repository");
+const MobPassivo_1 = require("../models/MobPassivo");
+const MobHostil_1 = require("../models/MobHostil");
 class Service {
     static async carregarBiomas() {
         const vetBiomas = [];

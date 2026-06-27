@@ -1,4 +1,4 @@
-import { IPesquisavel } from "../IPesquisavel";
+import { IPesquisavel } from "./IPesquisavel";
 
 export class Bioma implements IPesquisavel{
     private _nome: string;

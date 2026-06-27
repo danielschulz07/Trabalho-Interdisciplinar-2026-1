@@ -1,4 +1,4 @@
-import { consumoAPI } from "../consumoAPI";
+import { consumoAPI } from "../models/consumoAPI";
 import { Bioma } from "../models/Bioma";
 import { Repository } from "../repositories/Repository";
 import { Mob } from "../models/Mob";
