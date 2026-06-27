@@ -1,6 +1,6 @@
-const mysql = require('mysql2/promise');
+import { createPool } from 'mysql2/promise';
 
-const pool = mysql.createPool({
+const pool = createPool({
   host:     process.env.DB_HOST     || 'localhost',
   port:     Number(process.env.DB_PORT) || 3306,
   user:     process.env.DB_USER     || 'mobs_interdiciplinar1',
@@ -21,5 +21,6 @@ async function testConnection() {
   }
 }
  
-module.exports = pool;
-module.exports.testConnection = testConnection;
+export default pool;
+const _testConnection = testConnection;
+export { _testConnection as testConnection };
