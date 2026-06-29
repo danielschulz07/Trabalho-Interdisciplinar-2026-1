@@ -16,6 +16,15 @@ class Service {
             }
         }
     }
+    static async inserirBiomas() {
+        console.log("Entrou no Service");
+        const response = await consumoAPI_1.consumoAPI.consultaBioma("");
+        console.log(response);
+        for (const bioma of response.data) {
+            console.log(bioma);
+            await Repository_1.Repository.inserirBioma(bioma.nome, bioma.dimensao, bioma.categoria);
+        }
+    }
 }
 exports.Service = Service;
 //# sourceMappingURL=Service.js.map

@@ -19,6 +19,11 @@ class Repository {
         await db_1.default.query(`INSERT INTO MobsPassivos(id_mob)
              VALUES (?)`, [id_mob]);
     }
+    static async inserirBioma(nome, dimensao, categoria) {
+        const [result] = await db_1.default.query(`INSERT INTO Biomas (nome, dimensao, categoria)
+         VALUES (?, ?, ?)`, [nome, dimensao, categoria]);
+        return result.insertId;
+    }
 }
 exports.Repository = Repository;
 //# sourceMappingURL=Repository.js.map

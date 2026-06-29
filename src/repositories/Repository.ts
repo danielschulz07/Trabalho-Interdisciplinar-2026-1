@@ -35,4 +35,34 @@ export class Repository {
 
     }
 
+
+
+
+    static async inserirBioma(
+    nome: string,
+    dimensao: string,
+    categoria: string
+): Promise<number> {
+
+    const [result]: any = await pool.query(
+        `INSERT INTO Biomas (nome, dimensao, categoria)
+         VALUES (?, ?, ?)`,
+        [nome, dimensao, categoria]
+    );
+
+    return result.insertId;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

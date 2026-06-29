@@ -34,4 +34,43 @@ export class Service {
         }
     }
 
+
+
+static async inserirBiomas(): Promise<void> {
+
+    console.log("Entrou no Service");
+
+    const response = await consumoAPI.consultaBioma("");
+
+    console.log(response);
+
+    for (const bioma of response.data) {
+
+        console.log(bioma);
+
+        await Repository.inserirBioma(
+            bioma.nome,
+            bioma.dimensao,
+            bioma.categoria
+        );
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

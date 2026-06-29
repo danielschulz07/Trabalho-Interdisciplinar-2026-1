@@ -39,10 +39,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv = __importStar(require("dotenv"));
 const mobController_1 = require("./controllers/mobController");
+const biomaController_1 = require("./controllers/biomaController");
 dotenv.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.post("/mobs", mobController_1.MobController.inserir);
+app.post("/biomas", biomaController_1.BiomaController.inserir);
 app.listen(3000, () => {
     console.log("Servidor rodando em http://localhost:3000");
 });
