@@ -1,26 +1,68 @@
+import pool from "../config/db";
 import { Bioma } from "../models/Bioma";
 import { Mob } from "../models/Mob";
 
 export class Repository {
 
-    private static vetBiomas: Array<Bioma> = [];
-    private static vetMobs: Array<Mob> = [];
+    static async inserirMob(id_bioma:number,nome:string,vida:number,tipo:string){
 
-    static salvarBiomas(biomas: Array<Bioma>): void {
-        this.vetBiomas.push(...biomas);
+        const [result]:any = await pool.query(
+            `INSERT INTO Mobs(id_bioma,nome,vida,tipo)
+             VALUES (?,?,?,?)`,
+             [id_bioma,nome,vida,tipo]
+        );
+
+        return result.insertId;
     }
 
-    static listarBiomas(): Array<Bioma> {
-        return this.vetBiomas;
+    static async inserirHostil(id_mob:number,dano:number){
+
+        await pool.query(
+            `INSERT INTO MobsHostis(id_mob,dano)
+             VALUES (?,?)`,
+             [id_mob,dano]
+        );
+
     }
 
-    static salvarMobs(mobs: Array<Mob>): void {
-        this.vetMobs.push(...mobs);
+    static async inserirPassivo(id_mob:number){
+
+        await pool.query(
+            `INSERT INTO MobsPassivos(id_mob)
+             VALUES (?)`,
+             [id_mob]
+        );
+
     }
 
-    static listarMobs(): Array<Mob>{
-        return this.vetMobs;
-    }
+
+
+
+    static async inserirBioma(
+    nome: string,
+    dimensao: string,
+    categoria: string
+): Promise<number> {
+
+    const [result]: any = await pool.query(
+        `INSERT INTO Biomas (nome, dimensao, categoria)
+         VALUES (?, ?, ?)`,
+        [nome, dimensao, categoria]
+    );
+
+    return result.insertId;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

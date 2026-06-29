@@ -1,6 +1,9 @@
-import mysql, { Pool } from 'mysql2/promise';
+import * as dotenv from "dotenv";
 
-const pool: Pool = mysql.createPool({
+dotenv.config();
+import { createPool, Pool } from "mysql2/promise";
+
+const pool: Pool = createPool({
   host:     process.env.DB_HOST     || 'localhost',
   port:     Number(process.env.DB_PORT) || 3306,
   user:     process.env.DB_USER     || 'mobs_interdiciplinar1',
@@ -20,5 +23,4 @@ export async function testConnection() {
     console.error('Erro ao conectar ao banco de dados:', err.message);
   }
 }
- 
 export default pool;

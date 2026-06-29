@@ -18,7 +18,7 @@ export class MobHostil extends Mob{
     }
 
     public atacar(): string{
-        return "O mob " + super.nome + " fez um ataque e infligiu " + this._dano + " de dano!";
+        return "O mob " + this.nome + " fez um ataque e infligiu " + this._dano + " de dano!";
     }
 
     public toString(): string {
