@@ -49,9 +49,9 @@ static async inserirBiomas(): Promise<void> {
         console.log(bioma);
 
         await Repository.inserirBioma(
-            bioma.nome,
-            bioma.dimensao,
-            bioma.categoria
+            bioma.name,
+            bioma.dimension,
+            bioma.category
         );
     }
 }

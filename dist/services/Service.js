@@ -2,31 +2,28 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Service = void 0;
 const consumoAPI_1 = require("../models/consumoAPI");
-const Bioma_1 = require("../models/Bioma");
 const Repository_1 = require("../repositories/Repository");
-const MobPassivo_1 = require("../models/MobPassivo");
-const MobHostil_1 = require("../models/MobHostil");
 class Service {
-    static async carregarBiomas() {
-        const vetBiomas = [];
-        const dados = await consumoAPI_1.consumoAPI.consultaBioma("");
-        dados.data.forEach((bioma) => {
-            vetBiomas.push(new Bioma_1.Bioma(bioma.name, bioma.dimension, bioma.category));
-        });
-        Repository_1.Repository.salvarBiomas(vetBiomas);
+    static async inserirMob() {
+        const response = await consumoAPI_1.consumoAPI.consultaMob("");
+        for (const mob of response.data) {
+            const idMob = await Repository_1.Repository.inserirMob(mob.id_bioma, mob.nome, mob.vida, mob.tipo);
+            if (mob.tipo == "hostile") {
+                await Repository_1.Repository.inserirHostil(idMob, mob.dano);
+            }
+            else if (mob.tipo == "passive") {
+                await Repository_1.Repository.inserirPassivo(idMob);
+            }
+        }
     }
-    static async carregarMobs() {
-        const vetMobs = [];
-        const dados = await consumoAPI_1.consumoAPI.consultaMob("");
-        dados.data.forEach((mobs) => {
-            if (mobs.type == "passive") {
-                vetMobs.push(new MobPassivo_1.MobPassivo(mobs.name, mobs.type, mobs.hp, mobs.behavior));
-            }
-            else if (mobs.type == "hostile") {
-                vetMobs.push(new MobHostil_1.MobHostil(mobs.name, mobs.type, mobs.hp, mobs.behavior, mobs.damage.normal));
-            }
-        });
-        Repository_1.Repository.salvarMobs(vetMobs);
+    static async inserirBiomas() {
+        console.log("Entrou no Service");
+        const response = await consumoAPI_1.consumoAPI.consultaBioma("");
+        console.log(response);
+        for (const bioma of response.data) {
+            console.log(bioma);
+            await Repository_1.Repository.inserirBioma(bioma.name, bioma.dimension, bioma.category);
+        }
     }
 }
 exports.Service = Service;

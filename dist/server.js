@@ -56,7 +56,13 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: 'Erro interno no servidor.' });
 });
 app.listen(PORT, async () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
-    await (0, db_1.testConnection)();
+    try {
+        console.log(`Servidor rodando em http://localhost:${PORT}`);
+        await (0, db_1.testConnection)();
+        console.log("Servidor iniciado com sucesso!");
+    }
+    catch (error) {
+        console.error("Erro ao iniciar:", error);
+    }
 });
 //# sourceMappingURL=server.js.map

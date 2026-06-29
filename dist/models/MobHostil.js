@@ -15,7 +15,7 @@ class MobHostil extends Mob_1.Mob {
         this._dano = novoDano;
     }
     atacar() {
-        return "O mob " + super.nome + " fez um ataque e infligiu " + this._dano + " de dano!";
+        return "O mob " + this.nome + " fez um ataque e infligiu " + this._dano + " de dano!";
     }
     toString() {
         return super.toString() +
