@@ -3,23 +3,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MobController = void 0;
 const Service_1 = require("../services/Service");
 class MobController {
-    static async carregarMobs() {
-        await Service_1.Service.carregarMobs();
-    }
-    static listar() {
-        console.log("Mob Controller: Listando mobs");
-    }
-    static mostrar() {
-        console.log("Mob Controller: mostrando mob");
-    }
-    static inserir() {
-        console.log("Mob Controller: inserindo mob");
-    }
-    static atualizar() {
-        console.log("Mob Controller: atualizando mob");
-    }
-    static deletar() {
-        console.log("Mob Controller: deletando mob");
+    static async inserir(req, res) {
+        try {
+            await Service_1.Service.inserirMob();
+            res.status(201).json({
+                mensagem: "Mobs importados com sucesso!"
+            });
+        }
+        catch (error) {
+            res.status(500).json({
+                erro: error.message
+            });
+        }
     }
 }
 exports.MobController = MobController;

@@ -1,9 +1,9 @@
 import { Service } from "../services/Service";
 
 export class BiomaController {
-    static async carregarBiomas(): Promise<void> {
-        await Service.carregarBiomas();
-    }
+    //static async carregarBiomas(): Promise<void> {
+      //  await Service.carregarBiomas();
+    //}
 
     static listar(){
         console.log("Bioma Controller: Listando biomas");

@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 import express, { json, Request, Response, NextFunction } from 'express';
 import { testConnection } from './config/db';
 import mobRoutes from './routes/mobRoutes';
@@ -24,9 +23,15 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction): void => {
   res.status(500).json({ message: 'Erro interno no servidor.' });
 });
 
-app.listen(PORT, async (): Promise<void> => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
-  await testConnection();
+app.listen(PORT, async () => {
+    try {
+        console.log(`Servidor rodando em http://localhost:${PORT}`);
 
-  
+        await testConnection();
+
+        console.log("Servidor iniciado com sucesso!");
+
+    } catch (error) {
+        console.error("Erro ao iniciar:", error);
+    }
 });

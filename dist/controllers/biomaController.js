@@ -1,11 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BiomaController = void 0;
-const Service_1 = require("../services/Service");
 class BiomaController {
-    static async carregarBiomas() {
-        await Service_1.Service.carregarBiomas();
-    }
+    //static async carregarBiomas(): Promise<void> {
+    //  await Service.carregarBiomas();
+    //}
     static listar() {
         console.log("Bioma Controller: Listando biomas");
     }

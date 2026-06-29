@@ -1,17 +1,15 @@
-import { BiomaController } from "./controllers/biomaController";
+import express from "express";
+import * as dotenv from "dotenv";
 import { MobController } from "./controllers/mobController";
-import { Repository } from "./repositories/Repository";
 
-async function main() {
+dotenv.config();
 
-    //await BiomaController.carregarBiomas()
-    //console.log(Repository.listarBiomas())
+const app = express();
 
-    //await MobController.carregarMobs();
-    //console.log(Repository.listarMobs())
-        
-    //console.log(Repository.listarBiomas("plains"))
+app.use(express.json());
 
-}
+app.post("/mobs", MobController.inserir);
 
-main();
+app.listen(3000, () => {
+    console.log("Servidor rodando em http://localhost:3000");
+});

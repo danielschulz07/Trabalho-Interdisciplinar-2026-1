@@ -1,27 +1,24 @@
+import { Request, Response } from "express";
+import pool from "../config/db";
 import { Service } from "../services/Service";
 
-export class MobController {
-    static async carregarMobs(): Promise<void> {
-        await Service.carregarMobs();
-    }
+export class MobController{
 
-    static listar(){
-        console.log("Mob Controller: Listando mobs");
-    }
+    static async inserir(req: Request, res: Response) {
+    try {
 
-    static mostrar(){
-        console.log("Mob Controller: mostrando mob");
-    }
+        await Service.inserirMob();
 
-    static inserir(){
-        console.log("Mob Controller: inserindo mob");
-    }
+        res.status(201).json({
+            mensagem: "Mobs importados com sucesso!"
+        });
 
-    static atualizar(){
-        console.log("Mob Controller: atualizando mob");
-    }
+    } catch (error: any) {
 
-    static deletar(){
-        console.log("Mob Controller: deletando mob");
+        res.status(500).json({
+            erro: error.message
+        });
+
     }
+}
 }
