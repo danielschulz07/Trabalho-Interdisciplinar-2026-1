@@ -1,50 +1,66 @@
+import { mainMobs } from "./mobs/mobs.js";
+import { mainBiomas } from "./biomas/biomas.js";
+
 const rotas = {
     "/": () => {
-        const root = document.createElement('div');
-        root.style.padding = '60px 10%';
+        const root = document.createElement('div-main');
 
         const h1 = document.createElement('h1');
         h1.textContent = "Bem-vindo ao Astroworld!";
 
         const p = document.createElement('p');
-        p.textContent = "Explore os biomas e mobs do mundo de Astroworld.";
+        p.textContent = "Explore o universo do Minecraft e descubra os biomas e mobs que habitam esse mundo incrível!!";
 
         root.appendChild(h1);
         root.appendChild(p);
+
         return root;
     },
-    "/biomas": () => {
-         const root = document.createElement('div');
-         return root;
+
+    "/biomas": async (categoria, id) => {
+        const root = document.createElement("div");
+        root.appendChild(await mainBiomas(categoria, id));
+        return root;
     },
-    "/mobs": () => {
+
+    "/mobs": async (categoria, id) => {
         const root = document.createElement('div');
+        root.appendChild(await mainMobs(categoria, id));
         return root;
     },
 };
 
-//CRIAÇÃO DO HEADER
-
+// CRIAÇÃO DO HEADER
 const Criarheader = () => {
     const header = document.createElement("header");
+
     const div = document.createElement("div");
     div.classList.add("logo");
-    div.textContent = "ASTROWORLD";
+
+    const img = document.createElement("img");
+    img.src = "/frontEnd/astroworld-logo.webp";
+    img.alt = "Astroworld";
+
+    const span = document.createElement("span");
+    span.textContent = "ASTROWORLD";
+
     const nav = document.createElement("nav");
     nav.setAttribute("id", "subnav");
     const a1 = criarLink('inicio', '/');
     const a2 = criarLink('biomas', '/biomas');
     const a3 = criarLink('mobs', '/mobs');
 
+    div.appendChild(img);
+    div.appendChild(span);
     header.appendChild(div);
     header.appendChild(nav);
     nav.appendChild(a1);
     nav.appendChild(a2);
     nav.appendChild(a3);
-    
+
     return header;
 }
-//CRIAÇÃO DO LINK PARA O HEADER
+
 const criarLink = (texto, link) => {
     const a = document.createElement('a');
     a.textContent = texto;
@@ -53,10 +69,8 @@ const criarLink = (texto, link) => {
     return a;
 }
 
-
-//CRIAÇÃO DO MAIN
 const criarMain = () => {
-const linkcss = document.createElement('link');
+    const linkcss = document.createElement('link');
     linkcss.setAttribute('rel', 'stylesheet');
     linkcss.setAttribute('href', '/frontEnd/principal.css');
     document.head.appendChild(linkcss);
@@ -67,40 +81,49 @@ const linkcss = document.createElement('link');
 }
 criarMain();
 
-
-//CRIAÇÃO DO FOOTER
 const criaFooter = () => {
-    const footer = document.createElement('footer');
+    const footerEl = document.getElementById('footer');
     const p = document.createElement('p');
-    p.textContent = "©2026 ASTROWORLD. Todos os direitos reservados.";
-    footer.appendChild(p);
-    return footer;
+    p.innerHTML = "© 2026 Astroworld. Todos os direitos reservados.";
+    footerEl.appendChild(p);
 }
 
 
-//RENDERIZAÇÃO DAS ROTAS
-function renderizandoRotas(path) {
-    let partes = path.split("/");
-    let novoPath = "/" + partes[1];
+
+
+// RENDERIZAÇÃO DAS ROTAS
+
+async function renderizandoRotas(path) {
+    const partes = path.split("/").filter(Boolean); // remove vazios
+    const novoPath = "/" + (partes[0] || "");
+    const categoria = partes[1] || null;
     const id = partes[2] || null;
-    if (novoPath === "/index.html") {
-        novoPath = "/";
+
+    if (novoPath === "/index.html" || novoPath === "/") {
+        const pagina = rotas["/"];
+        const root = document.getElementById('root');
+        root.innerHTML = '';
+        root.appendChild(await pagina());
+        return;
     }
+
     const pagina = rotas[novoPath];
     const root = document.getElementById('root');
+
     if (pagina) {
         root.innerHTML = '';
-        root.appendChild(pagina(id));
+        root.appendChild(await pagina(categoria, id));
     } else {
         root.innerHTML = `<h1>404</h1><p>Página não encontrada.</p>`;
     }
 }
 
+criaFooter();
+
 document.addEventListener("click", function (event) {
     if (event.target.matches("[data-link]")) {
         event.preventDefault();
-        const novocaminho = event.target.getAttribute("href");
-        navegarPara(novocaminho);
+        navegarPara(event.target.getAttribute("href"));
     }
 });
 
