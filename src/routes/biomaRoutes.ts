@@ -6,7 +6,7 @@ const router = Router();
 router.get('/',      BiomaController.listar);
 router.get('/:id',   BiomaController.mostrar);
 router.post('/',     BiomaController.inserir);
-router.put('/:id',   BiomaController.atualizar);
+//router.put('/:id',   BiomaController.atualizar);
 router.delete('/:id', BiomaController.deletar);
 
 export default router;

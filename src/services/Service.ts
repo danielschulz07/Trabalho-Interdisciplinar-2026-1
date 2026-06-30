@@ -23,7 +23,7 @@ export class Service {
                     mob.dano
                 );
 
-            } else if (mob.tipo == "passive"){
+            } else if (mob.tipo == "passive") {
 
                 await Repository.inserirPassivo(
                     idMob
@@ -34,4 +34,74 @@ export class Service {
         }
     }
 
+
+
+    static async inserirBiomasAPI(): Promise<void> {
+
+        console.log("Entrou no Service");
+
+        const response = await consumoAPI.consultaBioma("");
+
+        //console.log(response);
+
+        for (const bioma of response.data) {
+
+            console.log(bioma.name);
+
+            await Repository.inserirBioma(
+                bioma.name,
+                bioma.dimension,
+                bioma.category
+            );
+        }
+    }
+
+    static async inserirBioma(nome: string, dimensao: string, categoria: string): Promise<number> {
+
+        console.log("Entrou no Service");
+
+        const resposta = await Repository.inserirBioma(
+                nome,
+                dimensao,
+                categoria
+            );
+
+        return resposta;
+    }
+
+    static async deletarBioma(nomeBioma: string): Promise<boolean> {
+
+        console.log("Entrou no Service");
+
+        const resposta = await Repository.deletarBioma(nomeBioma);
+
+        return resposta;
+    }
+
+    static async atualizarBioma(nomeBioma: string, coluna: string, valor:string): Promise<any> {
+
+        console.log("Entrou no Service");
+
+        const resposta = await Repository.atualizarBioma(nomeBioma, coluna, valor);
+
+        return resposta;
+    }
+
+    static async selecionarBioma(nomeBioma: string): Promise<any> {
+
+        console.log("Entrou no Service");
+
+        const resposta = await Repository.selecionarBioma(nomeBioma);
+
+        return resposta;
+    }
+
+    static async selecionarTodosBiomas(): Promise<any[]> {
+
+        console.log("Entrou no Service");
+
+        const resposta = await Repository.selecionarTodosBiomas();
+
+        return resposta;
+    }
 }

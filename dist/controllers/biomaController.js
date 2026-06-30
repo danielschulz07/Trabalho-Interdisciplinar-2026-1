@@ -2,23 +2,70 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BiomaController = void 0;
 class BiomaController {
-    //static async carregarBiomas(): Promise<void> {
-    //  await Service.carregarBiomas();
-    //}
-    static listar() {
-        console.log("Bioma Controller: Listando biomas");
+    _vetBiomas = [];
+    static async inserir(req, res) {
+        console.log("Entrou no Controller");
+        try {
+            await Service_1.Service.inserirBiomasAPI();
+            console.log("Service finalizado");
+            res.status(201).json({
+                mensagem: "Biomas importados com sucesso!"
+            });
+        }
+        catch (error) {
+            console.error(error);
+            res.status(500).json({
+                erro: error.message
+            });
+        }
     }
-    static mostrar() {
-        console.log("Bioma Controller: mostrando bioma");
+    static async listar() {
+        try {
+            const response = await Service_1.Service.selecionarTodosBiomas();
+            return response;
+        }
+        catch (e) {
+            return "Erro ao tentar listar dados: " + e.message;
+        }
     }
-    static inserir() {
-        console.log("Bioma Controller: inserindo bioma");
+    static async mostrar(bioma) {
+        try {
+            console.log("Bioma Controller: mostrando bioma");
+            const response = await Service_1.Service.selecionarBioma(bioma.nome);
+            return response;
+        }
+        catch (e) {
+            return e;
+        }
     }
-    static atualizar() {
-        console.log("Bioma Controller: atualizando bioma");
+    static async atualizar(nomeBioma, coluna, valor) {
+        try {
+            console.log("Bioma Controller: atualizando bioma");
+            const response = await Service_1.Service.atualizarBioma(nomeBioma, coluna, valor);
+            if (response == null) {
+                throw new Error("Não foi possível atualizar o bioma.");
+            }
+            return response;
+        }
+        catch (e) {
+            return e.message;
+        }
     }
-    static deletar() {
-        console.log("Bioma Controller: deletando bioma");
+    static async deletar(nomeBioma) {
+        try {
+            console.log("Bioma Controller: deletando bioma");
+            const response = await Service_1.Service.deletarBioma(nomeBioma);
+            if (!response) {
+                throw new Error("Não foi possível deletar o bioma.");
+            }
+            return response;
+        }
+        catch (e) {
+            return e.message;
+        }
+    }
+    pesquisarPorCriterio(criterio) {
+        return this._vetBiomas.filter(b => b.atendeCriterio(criterio));
     }
 }
 exports.BiomaController = BiomaController;
