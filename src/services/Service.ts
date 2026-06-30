@@ -23,7 +23,7 @@ export class Service {
                     mob.dano
                 );
 
-            } else if (mob.tipo == "passive"){
+            } else if (mob.tipo == "passive") {
 
                 await Repository.inserirPassivo(
                     idMob
@@ -36,29 +36,43 @@ export class Service {
 
 
 
-static async inserirBiomas(): Promise<void> {
+    static async inserirBiomas(): Promise<void> {
 
-    console.log("Entrou no Service");
+        console.log("Entrou no Service");
 
-    const response = await consumoAPI.consultaBioma("");
+        const response = await consumoAPI.consultaBioma("");
 
-    console.log(response);
+        console.log(response);
 
-    for (const bioma of response.data) {
+        for (const bioma of response.data) {
 
-        console.log(bioma);
+            console.log(bioma);
 
-        await Repository.inserirBioma(
-            bioma.name,
-            bioma.dimension,
-            bioma.category
-        );
+            await Repository.inserirBioma(
+                bioma.name,
+                bioma.dimension,
+                bioma.category
+            );
+        }
     }
-}
 
+    static async deletarBioma(nomeBioma: string): Promise<boolean> {
 
+        console.log("Entrou no Service");
 
+        const resposta = await Repository.deletarBioma(nomeBioma);
 
+        return resposta;
+    }
+
+    static async atualizarBioma(nomeBioma: string, coluna: string, valor:string): Promise<boolean> {
+
+        console.log("Entrou no Service");
+
+        const resposta = await Repository.atualizarBioma(nomeBioma, coluna, valor);
+
+        return resposta;
+    }
 
 
 

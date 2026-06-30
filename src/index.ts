@@ -12,9 +12,13 @@ app.use(express.json());
 
 app.post("/mobs", MobController.inserir);
 app.post("/biomas", BiomaController.inserir);
+app.get("/listarbiomas", BiomaController.listar);
+ 
 
 async function teste(){
-    await Service.inserirBiomas();
+    //await Service.inserirBiomas();
+    const resposta = await Service.atualizarBioma('Plains', 'categoria', 'teste');
+    console.log(resposta);
 }
 
 teste();

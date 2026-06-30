@@ -42,11 +42,67 @@ export class Repository {
         nome: string,
         dimensao: string,
         categoria: string
-    ): Promise<number> {
+    ): Promise<boolean> {
         console.log("Fazendo insert dos biomas no banco de dados...");
 
         const [result]: any = await pool.query(
             `INSERT INTO Biomas (nome, dimensao, categoria) VALUES ('${nome}', '${dimensao}', '${categoria}');`
+        );
+
+        if(result.affectedRows > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    static async deletarBioma(
+        nome: string
+    ): Promise<boolean> {
+        console.log("Deletando bioma no banco de dados...");
+
+        const result: any = await pool.query(
+            `DELETE FROM Biomas WHERE nome = '${nome}';`
+        );
+
+        if(result.affectedRows > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    static async atualizarBioma(
+        nome: string,
+        coluna: string,
+        novoValor: string
+    ): Promise<boolean> {
+        console.log("Atualizando bioma no banco de dados...");
+
+        const result: any = await pool.query(
+            `UPDATE Biomas SET ${coluna} = '${novoValor}' WHERE nome = '${nome}';`
+        );
+
+        return result;
+    }
+
+    static async selecionarBioma(
+        nome: string
+    ): Promise<number> {
+        console.log("Selecionando bioma no banco de dados...");
+
+        const result: any = await pool.query(
+            `SELECT * FROM Biomas WHERE nome = ${nome};`
+        );
+
+        return result.insertId;
+    }
+
+    static async selecionarTodosBiomas(): Promise<number> {
+        console.log("Selecionando todos os biomas do banco de dados...");
+
+        const [result]: any = await pool.query(
+            `SELECT * FROM Biomas;`
         );
 
         return result.insertId;

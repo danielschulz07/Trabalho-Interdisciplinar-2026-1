@@ -22,6 +22,36 @@ class Repository {
     static async inserirBioma(nome, dimensao, categoria) {
         console.log("Fazendo insert dos biomas no banco de dados...");
         const [result] = await db_1.default.query(`INSERT INTO Biomas (nome, dimensao, categoria) VALUES ('${nome}', '${dimensao}', '${categoria}');`);
+        if (result.affectedRows > 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    static async deletarBioma(nome) {
+        console.log("Deletando bioma no banco de dados...");
+        const result = await db_1.default.query(`DELETE FROM Biomas WHERE nome = '${nome}';`);
+        if (result.affectedRows > 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    static async atualizarBioma(nome, coluna, novoValor) {
+        console.log("Atualizando bioma no banco de dados...");
+        const result = await db_1.default.query(`UPDATE Biomas SET ${coluna} = '${novoValor}' WHERE nome = '${nome}';`);
+        return result;
+    }
+    static async selecionarBioma(nome) {
+        console.log("Selecionando bioma no banco de dados...");
+        const result = await db_1.default.query(`SELECT * FROM Biomas WHERE nome = ${nome};`);
+        return result.insertId;
+    }
+    static async selecionarTodosBiomas() {
+        console.log("Selecionando todos os biomas do banco de dados...");
+        const [result] = await db_1.default.query(`SELECT * FROM Biomas;`);
         return result.insertId;
     }
 }

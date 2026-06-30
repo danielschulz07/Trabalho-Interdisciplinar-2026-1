@@ -46,8 +46,11 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.post("/mobs", mobController_1.MobController.inserir);
 app.post("/biomas", biomaController_1.BiomaController.inserir);
+app.get("/listarbiomas", biomaController_1.BiomaController.listar);
 async function teste() {
-    await Service_1.Service.inserirBiomas();
+    //await Service.inserirBiomas();
+    const resposta = await Service_1.Service.atualizarBioma('Plains', 'categoria', 'teste');
+    console.log(resposta);
 }
 teste();
 app.listen(3000, () => {
