@@ -1,11 +1,14 @@
 -- Criar Banco de Dados --
-CREATE DATABASE trabalho_interdiciplinar_mobs;
+DROP DATABASE IF EXISTS trabalho_interdiciplinar_mobs;
+CREATE DATABASE IF NOT EXISTS trabalho_interdiciplinar_mobs;
 USE trabalho_interdiciplinar_mobs;
 
 -- Criar Usuário e Conceder Privilégios --
 CREATE USER 'mobs_interdiciplinar1'@'localhost' IDENTIFIED BY 'm0bs@12345';
 
 GRANT ALL PRIVILEGES ON trabalho_interdiciplinar_mobs TO mobs_interdiciplinar1;
+
+FLUSH PRIVILEGES;
 
 -- Criar Tabelas --
 DROP TABLE IF EXISTS Biomas;
