@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #1b2835;
+    background-color: #0f1923;
     color: #c7d5e0;
 }
 
@@ -17,24 +17,26 @@ main#root {
     flex: 1;
 }
 
-
 /* HEADER */
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
-    height: 56px;
-    background-color: #171a21;
-    border-bottom: 1px solid #2a475e;
+    height: 60px;
+    background-color: #0d1117;
+    border-bottom: 1px solid #1e3a5a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 900;
     color: #ffffff;
     letter-spacing: 3px;
@@ -42,8 +44,8 @@ header {
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     object-fit: contain;
 }
 
@@ -55,35 +57,53 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #c7d5e0;
+    color: #8ba3b0;
     font-size: 13px;
-    padding: 6px 12px;
-    border-radius: 3px;
+    padding: 6px 14px;
+    border-radius: 4px;
     transition: background 0.2s, color 0.2s;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 nav a:hover {
-    background-color: #2a475e;
+    background-color: #1e3a5a;
     color: #fff;
 }
 
-/* MAIN */
-
+/* HOME */
 div-main {
-    padding: 60px 10%;
+    padding: 80px 10%;
     text-align: center;
-    
+    display: block;
+}
+
+div-main h1 {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-shadow: 0 0 30px rgba(74, 158, 255, 0.3);
+}
+
+div-main p {
+    font-size: 15px;
+    color: #8ba3b0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* FOOTER */
-
 footer {
     text-align: center;
     padding: 22px;
-    background-color: #0f1c2c;
+    background-color: #0d1117;
     font-size: 12px;
-    color: #4a6a7a;
-    border-top: 1px solid #1a2f40;
-    letter-spacing: 0.3px;
+    color: #3a5a7a;
+    border-top: 1px solid #1e3a5a;
+    letter-spacing: 0.5px;
 }

@@ -1,4 +1,5 @@
-import { mainMobs, renderizarMobs } from "./mobs/mobs.js";
+import { mainMobs } from "./mobs/mobs.js";
+import { mainBiomas } from "./biomas/biomas.js";
 
 const rotas = {
     "/": () => {
@@ -8,35 +9,30 @@ const rotas = {
         h1.textContent = "Bem-vindo ao Astroworld!";
 
         const p = document.createElement('p');
-        p.textContent = "Explore o universo do Minecraft e descubra os biomas e mobs que habitam esse mundo incrível na verção 1.21";
+        p.textContent = "Explore o universo do Minecraft e descubra os biomas e mobs que habitam esse mundo incrível!!";
 
         root.appendChild(h1);
         root.appendChild(p);
 
         return root;
     },
-    "/biomas": () => {
-        const root = document.createElement('div');
 
-
+    "/biomas": async (categoria, id) => {
+        const root = document.createElement("div");
+        root.appendChild(await mainBiomas(categoria, id));
         return root;
     },
-    "/mobs": async (id) => {
+
+    "/mobs": async (categoria, id) => {
         const root = document.createElement('div');
-        if (id) {
-            root.appendChild(await mainMobs(id));
-        } else {
-            root.appendChild(await mainMobs());
-        }
+        root.appendChild(await mainMobs(categoria, id));
         return root;
     },
 };
 
-//CRIAÇÃO DO HEADER
+// CRIAÇÃO DO HEADER
 const Criarheader = () => {
     const header = document.createElement("header");
-    const logo = document.createElement("div");
-    logo.classList.add("logo");
 
     const div = document.createElement("div");
     div.classList.add("logo");
@@ -53,6 +49,7 @@ const Criarheader = () => {
     const a1 = criarLink('inicio', '/');
     const a2 = criarLink('biomas', '/biomas');
     const a3 = criarLink('mobs', '/mobs');
+
     div.appendChild(img);
     div.appendChild(span);
     header.appendChild(div);
@@ -63,7 +60,7 @@ const Criarheader = () => {
 
     return header;
 }
-//CRIAÇÃO DO LINK PARA O HEADER
+
 const criarLink = (texto, link) => {
     const a = document.createElement('a');
     a.textContent = texto;
@@ -72,8 +69,6 @@ const criarLink = (texto, link) => {
     return a;
 }
 
-
-//CRIAÇÃO DO MAIN
 const criarMain = () => {
     const linkcss = document.createElement('link');
     linkcss.setAttribute('rel', 'stylesheet');
@@ -86,9 +81,6 @@ const criarMain = () => {
 }
 criarMain();
 
-
-
-//CRIAÇÃO DO FOOTER
 const criaFooter = () => {
     const footerEl = document.getElementById('footer');
     const p = document.createElement('p');
@@ -96,29 +88,42 @@ const criaFooter = () => {
     footerEl.appendChild(p);
 }
 
-//RENDERIZAÇÃO DAS ROTAS
+
+
+
+// RENDERIZAÇÃO DAS ROTAS
+
 async function renderizandoRotas(path) {
-    let partes = path.split("/");
-    let novoPath = "/" + partes[1];
+    const partes = path.split("/").filter(Boolean); // remove vazios
+    const novoPath = "/" + (partes[0] || "");
+    const categoria = partes[1] || null;
     const id = partes[2] || null;
-    if (novoPath === "/index.html") {
-        novoPath = "/";
+
+    if (novoPath === "/index.html" || novoPath === "/") {
+        const pagina = rotas["/"];
+        const root = document.getElementById('root');
+        root.innerHTML = '';
+        root.appendChild(await pagina());
+        return;
     }
+
     const pagina = rotas[novoPath];
     const root = document.getElementById('root');
+
     if (pagina) {
         root.innerHTML = '';
-        root.appendChild(await pagina(id));
+        root.appendChild(await pagina(categoria, id));
     } else {
         root.innerHTML = `<h1>404</h1><p>Página não encontrada.</p>`;
     }
 }
+
 criaFooter();
+
 document.addEventListener("click", function (event) {
     if (event.target.matches("[data-link]")) {
         event.preventDefault();
-        const novocaminho = event.target.getAttribute("href");
-        navegarPara(novocaminho);
+        navegarPara(event.target.getAttribute("href"));
     }
 });
 
