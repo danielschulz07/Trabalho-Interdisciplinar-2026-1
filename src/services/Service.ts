@@ -36,17 +36,17 @@ export class Service {
 
 
 
-    static async inserirBiomas(): Promise<void> {
+    static async inserirBiomasAPI(): Promise<void> {
 
         console.log("Entrou no Service");
 
         const response = await consumoAPI.consultaBioma("");
 
-        console.log(response);
+        //console.log(response);
 
         for (const bioma of response.data) {
 
-            console.log(bioma);
+            console.log(bioma.name);
 
             await Repository.inserirBioma(
                 bioma.name,
@@ -54,6 +54,19 @@ export class Service {
                 bioma.category
             );
         }
+    }
+
+    static async inserirBioma(nome: string, dimensao: string, categoria: string): Promise<number> {
+
+        console.log("Entrou no Service");
+
+        const resposta = await Repository.inserirBioma(
+                nome,
+                dimensao,
+                categoria
+            );
+
+        return resposta;
     }
 
     static async deletarBioma(nomeBioma: string): Promise<boolean> {
@@ -65,7 +78,7 @@ export class Service {
         return resposta;
     }
 
-    static async atualizarBioma(nomeBioma: string, coluna: string, valor:string): Promise<boolean> {
+    static async atualizarBioma(nomeBioma: string, coluna: string, valor:string): Promise<any> {
 
         console.log("Entrou no Service");
 
@@ -74,17 +87,21 @@ export class Service {
         return resposta;
     }
 
+    static async selecionarBioma(nomeBioma: string): Promise<any> {
 
+        console.log("Entrou no Service");
 
+        const resposta = await Repository.selecionarBioma(nomeBioma);
 
+        return resposta;
+    }
 
+    static async selecionarTodosBiomas(): Promise<any[]> {
 
+        console.log("Entrou no Service");
 
+        const resposta = await Repository.selecionarTodosBiomas();
 
-
-
-
-
-
-
+        return resposta;
+    }
 }

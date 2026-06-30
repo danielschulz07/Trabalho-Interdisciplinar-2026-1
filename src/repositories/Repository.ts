@@ -42,18 +42,14 @@ export class Repository {
         nome: string,
         dimensao: string,
         categoria: string
-    ): Promise<boolean> {
+    ): Promise<number> {
         console.log("Fazendo insert dos biomas no banco de dados...");
 
         const [result]: any = await pool.query(
-            `INSERT INTO Biomas (nome, dimensao, categoria) VALUES ('${nome}', '${dimensao}', '${categoria}');`
+            `INSERT INTO Biomas (nome, dimensao, categoria) VALUES (?, ?, ?)`, [nome, dimensao, categoria]
         );
 
-        if(result.affectedRows > 0){
-            return true;
-        } else {
-            return false;
-        }
+        return result.insertId;
     }
 
     static async deletarBioma(
@@ -62,49 +58,46 @@ export class Repository {
         console.log("Deletando bioma no banco de dados...");
 
         const result: any = await pool.query(
-            `DELETE FROM Biomas WHERE nome = '${nome}';`
+            `DELETE FROM Biomas WHERE nome = ?`, [nome]
         );
 
-        if(result.affectedRows > 0){
-            return true;
-        } else {
-            return false;
-        }
+        return result.affectedRows > 0;
     }
 
     static async atualizarBioma(
         nome: string,
         coluna: string,
         novoValor: string
-    ): Promise<boolean> {
+    ): Promise<any> {
         console.log("Atualizando bioma no banco de dados...");
 
         const result: any = await pool.query(
-            `UPDATE Biomas SET ${coluna} = '${novoValor}' WHERE nome = '${nome}';`
+            `UPDATE Biomas SET ? = ? WHERE nome = ?`, [coluna, novoValor, nome]
+        );
+
+        if(result.affectedRows === 0) return null;
+        return this.selecionarBioma(nome);
+    }
+
+    static async selecionarBioma(
+        nome: string
+    ): Promise<any> {
+        console.log("Selecionando bioma no banco de dados...");
+
+        const result: any = await pool.query(
+            `SELECT * FROM Biomas WHERE nome = ?`, [nome]
         );
 
         return result;
     }
 
-    static async selecionarBioma(
-        nome: string
-    ): Promise<number> {
-        console.log("Selecionando bioma no banco de dados...");
-
-        const result: any = await pool.query(
-            `SELECT * FROM Biomas WHERE nome = ${nome};`
-        );
-
-        return result.insertId;
-    }
-
-    static async selecionarTodosBiomas(): Promise<number> {
+    static async selecionarTodosBiomas(): Promise<any[]> {
         console.log("Selecionando todos os biomas do banco de dados...");
 
         const [result]: any = await pool.query(
-            `SELECT * FROM Biomas;`
+            `SELECT * FROM Biomas`
         );
 
-        return result.insertId;
+        return result;
     }
 }

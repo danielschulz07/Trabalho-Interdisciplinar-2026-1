@@ -40,7 +40,6 @@ const express_1 = __importDefault(require("express"));
 const dotenv = __importStar(require("dotenv"));
 const mobController_1 = require("./controllers/mobController");
 const biomaController_1 = require("./controllers/biomaController");
-const Service_1 = require("./services/Service");
 dotenv.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
@@ -49,8 +48,8 @@ app.post("/biomas", biomaController_1.BiomaController.inserir);
 app.get("/listarbiomas", biomaController_1.BiomaController.listar);
 async function teste() {
     //await Service.inserirBiomas();
-    const resposta = await Service_1.Service.atualizarBioma('Plains', 'categoria', 'teste');
-    console.log(resposta);
+    //const resposta = await Service.atualizarBioma('Plains', 'categoria', 'teste');
+    //console.log(resposta);
 }
 teste();
 app.listen(3000, () => {
