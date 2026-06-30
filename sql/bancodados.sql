@@ -8,6 +8,8 @@ CREATE USER 'mobs_interdiciplinar1'@'localhost' IDENTIFIED BY 'm0bs@12345';
 
 GRANT ALL PRIVILEGES ON trabalho_interdiciplinar_mobs TO mobs_interdiciplinar1;
 
+GRANT SELECT, SHOW VIEW ON trabalho_interdiciplinar_mobs.vw_mobs_maior_vida TO 'mobs_interdiciplinar1'@'localhost';
+
 FLUSH PRIVILEGES;
 
 -- Criar Tabelas --
