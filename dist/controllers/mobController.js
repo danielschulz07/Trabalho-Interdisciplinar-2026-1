@@ -5,6 +5,7 @@ const Service_1 = require("../services/Service");
 class MobController {
     static async inserir(req, res) {
         try {
+            console.log("to aqui");
             await Service_1.Service.inserirMob();
             res.status(201).json({
                 mensagem: "Mobs importados com sucesso!"

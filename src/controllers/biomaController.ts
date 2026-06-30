@@ -3,7 +3,7 @@ import { Service } from "../services/Service";
 
 export class BiomaController {
 
-
+/*
 static async inserir(req: Request, res: Response) {
 
     console.log("Entrou no Controller");
@@ -43,5 +43,5 @@ static async inserir(req: Request, res: Response) {
 
     static deletar(){
         console.log("Bioma Controller: deletando bioma");
-    }
+    }*/
 }

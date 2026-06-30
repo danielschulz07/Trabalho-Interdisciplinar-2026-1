@@ -8,69 +8,25 @@ export class Service {
         const response = await consumoAPI.consultaMob("");
 
         for (const mob of response.data) {
-
-            const idMob = await Repository.inserirMob(
-                mob.id_bioma,
-                mob.nome,
-                mob.vida,
-                mob.tipo
-            );
+            const idMob = await Repository.inserirMob(mob.id_bioma, mob.nome, mob.vida, mob.tipo);
 
             if (mob.tipo == "hostile") {
-
                 await Repository.inserirHostil(
                     idMob,
                     mob.dano
                 );
 
             } else if (mob.tipo == "passive"){
-
                 await Repository.inserirPassivo(
                     idMob
                 );
-
             }
-
         }
     }
 
 
 
-static async inserirBiomas(): Promise<void> {
 
-    console.log("Entrou no Service");
-
-    const response = await consumoAPI.consultaBioma("");
-
-    console.log(response);
-
-    for (const bioma of response.data) {
-
-        console.log(bioma);
-
-        await Repository.inserirBioma(
-            bioma.nome,
-            bioma.dimensao,
-            bioma.categoria
-        );
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 }

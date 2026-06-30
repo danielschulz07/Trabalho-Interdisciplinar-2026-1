@@ -4,8 +4,8 @@ exports.MobHostil = void 0;
 const Mob_1 = require("./Mob");
 class MobHostil extends Mob_1.Mob {
     _dano;
-    constructor(nome, tipo, vida, descricao, dano) {
-        super(nome, tipo, vida, descricao);
+    constructor(nome, tipo, vida, descricao, bioma, dano) {
+        super(nome, tipo, vida, descricao, bioma);
         this._dano = dano;
     }
     get dano() {

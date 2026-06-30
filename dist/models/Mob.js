@@ -7,12 +7,13 @@ class Mob {
     _tipo;
     _vida;
     _descricao;
-    constructor(nome, tipo, vida, descricao) {
+    _bioma;
+    constructor(nome, tipo, vida, descricao, bioma) {
         this._nome = nome;
         this._tipo = tipo;
         this._vida = vida;
         this._descricao = descricao;
-        Mob._idMob++;
+        this._bioma = bioma;
     }
     static get idMob() {
         return this._idMob;

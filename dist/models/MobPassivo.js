@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MobPassivo = void 0;
 const Mob_1 = require("./Mob");
 class MobPassivo extends Mob_1.Mob {
-    constructor(nome, tipo, vida, descricao) {
-        super(nome, tipo, vida, descricao);
+    constructor(nome, tipo, vida, descricao, bioma) {
+        super(nome, tipo, vida, descricao, bioma);
     }
 }
 exports.MobPassivo = MobPassivo;
