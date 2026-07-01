@@ -14,6 +14,10 @@ class BiomaService {
         const bioma = BiomaRepository_1.default.selectBioma(nome);
         return bioma;
     }
+    static async insertBioma(nome, dimensao, categoria) {
+        const resposta = BiomaRepository_1.default.insertBioma(nome, dimensao, categoria);
+        return resposta;
+    }
 }
 exports.BiomaService = BiomaService;
 //# sourceMappingURL=BiomaService.js.map

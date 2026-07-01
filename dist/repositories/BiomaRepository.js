@@ -18,6 +18,10 @@ class BiomaRepository {
         const [row] = await db_1.default.query(`SELECT * FROM ${this._tableName} WHERE nome = '${nome}'`);
         return row;
     }
+    async insertBioma(nome, dimensao, categoria) {
+        const [row] = await db_1.default.query(`INSERT INTO ${this._tableName} (nome, dimensao, categoria) VALUES ('${nome}', '${dimensao}', '${categoria}')`);
+        return row;
+    }
 }
 exports.BiomaRepository = BiomaRepository;
 exports.default = new BiomaRepository("Biomas");

@@ -13,4 +13,10 @@ export class BiomaService{
 
         return bioma;
     }
+
+    static async insertBioma(nome: string, dimensao: string, categoria: string){
+        const resposta = BiomaRepo.insertBioma(nome, dimensao, categoria);
+        
+        return resposta;
+    }
 }

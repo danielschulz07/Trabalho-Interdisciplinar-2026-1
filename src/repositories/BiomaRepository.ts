@@ -23,6 +23,14 @@ export class BiomaRepository{
 
         return row;
     }
+
+    async insertBioma(nome: string, dimensao: string, categoria: string){
+        const [row] = await pool.query(
+            `INSERT INTO ${this._tableName} (nome, dimensao, categoria) VALUES ('${nome}', '${dimensao}', '${categoria}')`
+        );
+
+        return row;
+    }
 }
 
 export default new BiomaRepository("Biomas");

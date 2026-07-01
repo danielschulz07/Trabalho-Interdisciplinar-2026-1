@@ -56,11 +56,13 @@ export class BiomaController {
     }
 
     static async insertBioma(req: Request, res: Response){
+        const { nome, dimensao, categoria } = req.query;
+        const resposta = await BiomaService.insertBioma(nome as string, dimensao as string, categoria as string);
+        return res.json(resposta);
+
 
         //const nomeBioma: string = req.params.nome as string;
         //const bioma = await BiomaService.getBioma(nomeBioma);
-        console.log("Insert bioma no controller");
-        return res.json({message: "Insert bioma no controller"});
         
     }
 
