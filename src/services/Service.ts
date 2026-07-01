@@ -56,7 +56,7 @@ export class Service {
         }
     }
 
-    static async inserirBioma(nome: string, dimensao: string, categoria: string): Promise<number> {
+    static async inserirBioma(nome: string, dimensao: string, categoria: string): Promise<any> {
 
         console.log("Entrou no Service");
 
@@ -76,7 +76,7 @@ export class Service {
         return resposta;
     }
 
-    static async deletarBioma(nomeBioma: string): Promise<boolean> {
+    static async deletarBioma(nomeBioma: string): Promise<any> {
 
         console.log("Entrou no Service");
 

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BiomaController = void 0;
+const Service_1 = require("../services/Service");
 class BiomaController {
-<<<<<<< HEAD
     _vetBiomas = [];
     static async inserir(req, res) {
         console.log("Entrou no Controller");
@@ -68,8 +68,6 @@ class BiomaController {
     pesquisarPorCriterio(criterio) {
         return this._vetBiomas.filter(b => b.atendeCriterio(criterio));
     }
-=======
->>>>>>> daniel
 }
 exports.BiomaController = BiomaController;
 //# sourceMappingURL=biomaController.js.map

@@ -128,4 +128,16 @@ static async deletarMob(nome: string): Promise<boolean> {
         return this.selecionarMob(nome);
     }
 
+
+        static async selecionarTodosBiomas(): Promise<any[]> {
+        console.log("Selecionando todos os biomas do banco de dados...");
+
+        const [result]: any = await pool.query(
+            `SELECT * FROM Biomas`
+
+        );
+
+        return result;
+    }
+
 }

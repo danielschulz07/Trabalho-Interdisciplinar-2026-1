@@ -4,36 +4,9 @@ import { Bioma } from "../models/Bioma.js";
 import { IPesquisavel } from "../models/IPesquisavel.js";
 
 export class BiomaController {
-<<<<<<< HEAD
+
     _vetBiomas: Array<Bioma> = [];
-=======
 
-/*
-static async inserir(req: Request, res: Response) {
-
-    console.log("Entrou no Controller");
-
-    try {
-
-        await Service.inserirBiomas();
-
-        console.log("Service finalizado");
-
-        res.status(201).json({
-            mensagem: "Biomas importados com sucesso!"
-        });
-
-    } catch (error: any) {
-
-        console.error(error);
-
-        res.status(500).json({
-            erro: error.message
-        });
-
-    }
-}
->>>>>>> daniel
 
     static async inserir(req: Request, res: Response) {
 
@@ -73,7 +46,7 @@ static async inserir(req: Request, res: Response) {
         }
     }
 
-<<<<<<< HEAD
+
     static async mostrar(bioma: Bioma){
         try {
 
@@ -128,13 +101,3 @@ static async inserir(req: Request, res: Response) {
         return this._vetBiomas.filter(b => b.atendeCriterio(criterio));
     }
 }
-=======
-    static atualizar(){
-        console.log("Bioma Controller: atualizando bioma");
-    }
-
-    static deletar(){
-        console.log("Bioma Controller: deletando bioma");
-    }*/
-}
->>>>>>> daniel

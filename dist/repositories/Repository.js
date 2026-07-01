@@ -19,7 +19,27 @@ class Repository {
         await db_1.default.query(`INSERT INTO MobsPassivos(id_mob)
              VALUES (?)`, [id_mob]);
     }
-<<<<<<< HEAD
+    static async deletarMob(nome) {
+        console.log("Deletando Mob no banco de dados...");
+        const result = await db_1.default.query(`DELETE FROM Mobs WHERE nome = ?`, [nome]);
+        return result.affectedRows > 0;
+    }
+    static async atualizarMob(nome, coluna, novoValor) {
+        console.log("Atualizando bioma no banco de dados...");
+        const result = await db_1.default.query(`UPDATE Biomas SET ? = ? WHERE nome = ?`, [coluna, novoValor, nome]);
+        if (result.affectedRows === 0)
+            return null;
+    }
+    static async selecionarMob(nome) {
+        console.log("Selecionando mob no banco de dados...");
+        const result = await db_1.default.query(`SELECT * FROM Mobs WHERE nome = ?`, [nome]);
+        return result;
+    }
+    static async selecionarTodosMobs() {
+        console.log("Selecionando todos os mobs do banco de dados...");
+        const [result] = await db_1.default.query(`SELECT * FROM Mobs`);
+        return result;
+    }
     static async inserirBioma(nome, dimensao, categoria) {
         console.log("Fazendo insert dos biomas no banco de dados...");
         const [result] = await db_1.default.query(`INSERT INTO Biomas (nome, dimensao, categoria) VALUES (?, ?, ?)`, [nome, dimensao, categoria]);
@@ -35,38 +55,17 @@ class Repository {
         const result = await db_1.default.query(`UPDATE Biomas SET ? = ? WHERE nome = ?`, [coluna, novoValor, nome]);
         if (result.affectedRows === 0)
             return null;
-        return this.selecionarBioma(nome);
     }
     static async selecionarBioma(nome) {
         console.log("Selecionando bioma no banco de dados...");
         const result = await db_1.default.query(`SELECT * FROM Biomas WHERE nome = ?`, [nome]);
-        return result;
-    }
-    static async selecionarTodosBiomas() {
-        console.log("Selecionando todos os biomas do banco de dados...");
-        const [result] = await db_1.default.query(`SELECT * FROM Biomas`);
-=======
-    static async deletarMob(nome) {
-        console.log("Deletando Mob no banco de dados...");
-        const result = await db_1.default.query(`DELETE FROM Mobs WHERE nome = ?`, [nome]);
-        return result.affectedRows > 0;
-    }
-    static async atualizarMob(nome, coluna, novoValor) {
-        console.log("Atualizando mob no banco de dados...");
-        const result = await db_1.default.query(`UPDATE Mobs SET ? = ? WHERE nome = ?`, [coluna, novoValor, nome]);
         if (result.affectedRows === 0)
             return null;
         return this.selecionarMob(nome);
     }
-    static async selecionarMob(nome) {
-        console.log("Selecionando mob no banco de dados...");
-        const result = await db_1.default.query(`SELECT * FROM Mobs WHERE nome = ?`, [nome]);
-        return result;
-    }
-    static async selecionarTodosMobs() {
-        console.log("Selecionando todos os mobs do banco de dados...");
-        const [result] = await db_1.default.query(`SELECT * FROM Mobs`);
->>>>>>> daniel
+    static async selecionarTodosBiomas() {
+        console.log("Selecionando todos os biomas do banco de dados...");
+        const [result] = await db_1.default.query(`SELECT * FROM Biomas`);
         return result;
     }
 }

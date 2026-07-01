@@ -43,6 +43,7 @@ const biomaController_1 = require("./controllers/biomaController");
 dotenv.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
+console.log(biomaController_1.BiomaController);
 app.post("/mobs", mobController_1.MobController.inserir);
 app.post("/biomas", biomaController_1.BiomaController.inserir);
 app.get("/listarbiomas", biomaController_1.BiomaController.listar);
