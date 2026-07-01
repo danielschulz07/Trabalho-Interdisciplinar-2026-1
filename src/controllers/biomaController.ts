@@ -32,8 +32,8 @@ export class BiomaController {
     }*/
 
     static async getBiomas(reg: Request, res: Response){
-        await BiomaService.getBiomas();
-        return res.json({mensagem: "teste"});
+        const biomas = await BiomaService.getBiomas();
+        return res.json(biomas);
 
         // try {
 
@@ -45,6 +45,23 @@ export class BiomaController {
         //     return "Erro ao tentar listar dados: " + e.message;
 
         // }
+    }
+
+    static async getBioma(req: Request, res: Response){
+
+        const nomeBioma: string = req.params.nome as string;
+        const bioma = await BiomaService.getBioma(nomeBioma);
+        return res.json(bioma);
+
+    }
+
+    static async insertBioma(req: Request, res: Response){
+
+        //const nomeBioma: string = req.params.nome as string;
+        //const bioma = await BiomaService.getBioma(nomeBioma);
+        console.log("Insert bioma no controller");
+        return res.json({message: "Insert bioma no controller"});
+        
     }
 
     /*static async mostrar(bioma: Bioma){

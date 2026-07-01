@@ -29,14 +29,25 @@ class BiomaController {
         }
     }*/
     static async getBiomas(reg, res) {
-        await BiomaService_1.BiomaService.getBiomas();
-        return res.json({ mensagem: "teste" });
+        const biomas = await BiomaService_1.BiomaService.getBiomas();
+        return res.json(biomas);
         // try {
         //     const response = await Service.selecionarTodosBiomas();
         //     return response;
         // } catch(e: any) {
         //     return "Erro ao tentar listar dados: " + e.message;
         // }
+    }
+    static async getBioma(req, res) {
+        const nomeBioma = req.params.nome;
+        const bioma = await BiomaService_1.BiomaService.getBioma(nomeBioma);
+        return res.json(bioma);
+    }
+    static async insertBioma(req, res) {
+        //const nomeBioma: string = req.params.nome as string;
+        //const bioma = await BiomaService.getBioma(nomeBioma);
+        console.log("Insert bioma no controller");
+        return res.json({ message: "Insert bioma no controller" });
     }
     /*static async mostrar(bioma: Bioma){
         try {

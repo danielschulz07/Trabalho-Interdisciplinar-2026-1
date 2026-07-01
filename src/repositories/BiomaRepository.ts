@@ -8,9 +8,21 @@ export class BiomaRepository{
         this._tableName = tableName;
     }
 
-    static async findAll(){
-        const [rows] = await pool.query<T>(
-            `SELECT * FROM Biomas`
+    async findAll(){
+        const [rows] = await pool.query(
+            `SELECT * FROM ${this._tableName}`
         );
+
+        return rows;
+    }
+
+    async selectBioma(nome: string){
+        const [row] = await pool.query(
+            `SELECT * FROM ${this._tableName} WHERE nome = '${nome}'`
+        );
+
+        return row;
     }
 }
+
+export default new BiomaRepository("Biomas");

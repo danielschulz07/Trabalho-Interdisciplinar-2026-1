@@ -1,5 +1,16 @@
+import BiomaRepo from "../repositories/BiomaRepository";
+
 export class BiomaService{
+
     static async getBiomas(){
-        console.log("Get biomas no service.");
+        const biomas = BiomaRepo.findAll();
+
+        return biomas;
+    }
+
+    static async getBioma(nome: string){
+        const bioma = BiomaRepo.selectBioma(nome);
+
+        return bioma;
     }
 }
