@@ -4,6 +4,7 @@ import { MobController } from "./controllers/mobController";
 import { BiomaController } from "./controllers/biomaController";
 import { Service } from "./services/Service";
 
+
 dotenv.config();
 
 const app = express();

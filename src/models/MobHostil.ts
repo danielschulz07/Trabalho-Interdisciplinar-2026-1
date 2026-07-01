@@ -1,10 +1,11 @@
+import { Bioma } from "./Bioma";
 import { Mob } from "./Mob";
 
 export class MobHostil extends Mob{
     private _dano: number;
 
-    constructor(nome: string, tipo: string, vida: number, descricao: string, dano: number){
-        super(nome, tipo, vida, descricao);
+    constructor(nome: string, tipo: string, vida: number, descricao: string, bioma: Bioma,dano: number){
+        super(nome, tipo, vida, descricao, bioma);
 
         this._dano = dano;
     }

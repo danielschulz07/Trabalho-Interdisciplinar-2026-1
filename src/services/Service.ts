@@ -3,30 +3,30 @@ import { Repository } from "../repositories/Repository";
 
 export class Service {
 
-    static async inserirMob(): Promise<void> {
+    static async inserirMobsAPI(): Promise<void> {
 
+        console.log("Entrou no Service");
         const response = await consumoAPI.consultaMob("");
 
         for (const mob of response.data) {
-
-            const idMob = await Repository.inserirMob(
+            await Repository.inserirMob(
                 mob.id_bioma,
-                mob.nome,
-                mob.vida,
-                mob.tipo
+                mob.name,
+                mob.life,
+                mob.type
             );
 
             if (mob.tipo == "hostile") {
 
-                await Repository.inserirHostil(
-                    idMob,
+                await Repository.inserirMobHostil(
+                    mob.idMob,
                     mob.dano
                 );
 
             } else if (mob.tipo == "passive") {
 
-                await Repository.inserirPassivo(
-                    idMob
+                await Repository.inserirMobPassivo(
+                    mob.idMob
                 );
 
             }
@@ -61,10 +61,17 @@ export class Service {
         console.log("Entrou no Service");
 
         const resposta = await Repository.inserirBioma(
-                nome,
-                dimensao,
-                categoria
-            );
+            nome,
+            dimensao,
+            categoria
+        );
+
+    }
+
+
+    static async deletarMob(nomeBioma: string): Promise<boolean> {
+        console.log("Entrou no Service");
+        const resposta = await Repository.deletarMob(nomeBioma);
 
         return resposta;
     }
@@ -74,18 +81,31 @@ export class Service {
         console.log("Entrou no Service");
 
         const resposta = await Repository.deletarBioma(nomeBioma);
+    }
+
+
+    static async atualizarMob(nomeBioma: string, coluna: string, valor: string): Promise<any> {
+        console.log("Entrou no Service");
+        const resposta = await Repository.atualizarMob(nomeBioma, coluna, valor);
 
         return resposta;
     }
 
-    static async atualizarBioma(nomeBioma: string, coluna: string, valor:string): Promise<any> {
+
+    static async atualizarBioma(nomeBioma: string, coluna: string, valor: string): Promise<any> {
 
         console.log("Entrou no Service");
 
         const resposta = await Repository.atualizarBioma(nomeBioma, coluna, valor);
+    }
 
+
+    static async selecionarMob(nomeBioma: string): Promise<any> {
+        console.log("Entrou no Service");
+        const resposta = await Repository.selecionarMob(nomeBioma);
         return resposta;
     }
+
 
     static async selecionarBioma(nomeBioma: string): Promise<any> {
 
@@ -96,11 +116,18 @@ export class Service {
         return resposta;
     }
 
-    static async selecionarTodosBiomas(): Promise<any[]> {
+    static async selecionarTodosBiomas(): Promise<any> {
 
         console.log("Entrou no Service");
 
         const resposta = await Repository.selecionarTodosBiomas();
+    }
+
+
+    static async selecionarTodosMobs(): Promise<any[]> {
+        console.log("Entrou no Service");
+        const resposta = await Repository.selecionarTodosMobs();
+
 
         return resposta;
     }

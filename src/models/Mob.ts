@@ -1,3 +1,4 @@
+import { Bioma } from "./Bioma";
 import { IPesquisavel } from "./IPesquisavel";
 
 export class Mob implements IPesquisavel{
@@ -6,14 +7,15 @@ export class Mob implements IPesquisavel{
     private _tipo: string;
     private _vida: number;
     private _descricao: string;
+    private _bioma: Bioma;
 
 
-constructor(nome: string, tipo: string, vida: number, descricao: string){
+constructor(nome: string, tipo: string, vida: number, descricao: string, bioma: Bioma){
         this._nome = nome;
         this._tipo = tipo;
         this._vida = vida;
         this._descricao = descricao;
-        Mob._idMob++
+        this._bioma = bioma;
 }
 
     public static get idMob(): number {
