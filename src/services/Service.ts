@@ -10,9 +10,9 @@ export class Service {
 
         for (const mob of response.data) {
             await Repository.inserirMob(
+                mob.id_bioma,
                 mob.name,
-                mob.dimension,
-                mob.category,
+                mob.life,
                 mob.type
             );
         }

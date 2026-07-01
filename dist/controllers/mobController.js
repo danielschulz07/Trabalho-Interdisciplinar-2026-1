@@ -5,6 +5,7 @@ const Service_1 = require("../services/Service");
 class MobController {
     _vetMobs = [];
     static async inserir(req, res) {
+        console.log("ESTOU NO CONTROLLER NOVO");
         try {
             await Service_1.Service.inserirMobsAPI();
             console.log("Service finalizado");

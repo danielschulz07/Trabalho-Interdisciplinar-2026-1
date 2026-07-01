@@ -43,7 +43,6 @@ dotenv.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.post("/mobs", mobController_1.MobController.inserir);
-//app.post("/biomas", BiomaController.inserir);
 app.listen(3000, () => {
     console.log("Servidor rodando em http://localhost:3000");
 });

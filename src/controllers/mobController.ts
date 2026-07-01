@@ -7,6 +7,7 @@ export class MobController {
     _vetMobs: Array<Mob> = [];
 
     static async inserir(req: Request, res: Response) {
+        console.log("ESTOU NO CONTROLLER NOVO");
         try {
             await Service.inserirMobsAPI();
             console.log("Service finalizado");

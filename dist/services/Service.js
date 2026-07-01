@@ -8,7 +8,7 @@ class Service {
         console.log("Entrou no Service");
         const response = await consumoAPI_1.consumoAPI.consultaMob("");
         for (const mob of response.data) {
-            await Repository_1.Repository.inserirMob(mob.name, mob.dimension, mob.category, mob.type);
+            await Repository_1.Repository.inserirMob(mob.id_bioma, mob.name, mob.life, mob.type);
         }
     }
     static async deletarMob(nomeBioma) {

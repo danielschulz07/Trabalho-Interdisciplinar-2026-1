@@ -10,7 +10,6 @@ const app = express();
 app.use(express.json());
 
 app.post("/mobs", MobController.inserir);
-//app.post("/biomas", BiomaController.inserir);
 
 app.listen(3000, () => {
     console.log("Servidor rodando em http://localhost:3000");
