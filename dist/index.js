@@ -36,13 +36,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const dotenv = __importStar(require("dotenv"));
 const express_1 = __importDefault(require("express"));
-const mobRoutes_1 = __importDefault(require("./routes/mobRoutes"));
+const dotenv = __importStar(require("dotenv"));
+const mobController_1 = require("./controllers/mobController");
 dotenv.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use("/mobs", mobRoutes_1.default);
+app.post("/mobs", mobController_1.MobController.inserir);
 //app.post("/biomas", BiomaController.inserir);
 app.listen(3000, () => {
     console.log("Servidor rodando em http://localhost:3000");
