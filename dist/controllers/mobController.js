@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MobController = void 0;
-const Service_1 = require("../services/Service");
+const MobService_1 = require("../services/MobService");
 class MobController {
     static async inserir(req, res) {
         try {
-            await Service_1.Service.inserirMob();
+            await MobService_1.MobService.inserirMob();
             res.status(201).json({
                 mensagem: "Mobs importados com sucesso!"
             });

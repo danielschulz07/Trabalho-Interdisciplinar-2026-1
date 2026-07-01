@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
 import pool from "../config/db";
-import { Service } from "../services/Service";
+import { MobService } from "../services/MobService";
 
 export class MobController{
 
     static async inserir(req: Request, res: Response) {
     try {
 
-        await Service.inserirMob();
+        await MobService.inserirMob();
 
         res.status(201).json({
             mensagem: "Mobs importados com sucesso!"

@@ -1,7 +1,7 @@
 import { consumoAPI } from "../models/consumoAPI";
 import { Repository } from "../repositories/Repository";
 
-export class Service {
+export class MobService {
 
     static async inserirMob(): Promise<void> {
 

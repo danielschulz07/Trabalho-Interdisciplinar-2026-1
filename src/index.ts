@@ -1,28 +1,42 @@
 import express from "express";
 import * as dotenv from "dotenv";
-import { MobController } from "./controllers/mobController";
-import { BiomaController } from "./controllers/biomaController";
-import { Service } from "./services/Service";
+//import { MobController } from "./controllers/mobController";
+//import { BiomaController } from "./controllers/biomaController";
+import mobRoutes from './routes/mobRoutes';
+import biomaRoutes from './routes/biomaRoutes';
+import { testConnection } from './config/db';
+//import { Service } from "./services/Service";
 
-dotenv.config();
-
+//dotenv.config();
 const app = express();
+const PORT: number = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
 
-app.post("/mobs", MobController.inserir);
-app.post("/biomas", BiomaController.inserir);
-app.get("/listarbiomas", BiomaController.listar);
+app.use('/mobs', mobRoutes);
+app.use('/biomas', biomaRoutes);
+
+//app.post("/mobs", MobController.inserir);
+//app.post("/biomas", BiomaController.inserir);
+//app.get("/listarbiomas", BiomaController.listar);
+
+app.listen(PORT, async () => {
+        console.log(`Servidor rodando em http://localhost:${PORT}`);
+
+        await testConnection();
+
+        console.log("Servidor iniciado com sucesso!");
+});
  
 
-async function teste(){
+//async function teste(){
     //await Service.inserirBiomas();
     //const resposta = await Service.atualizarBioma('Plains', 'categoria', 'teste');
     //console.log(resposta);
-}
+//}
 
-teste();
+//teste();
 
-app.listen(3000, () => {
-    console.log("Servidor rodando em http://localhost:3000");
-});
+// app.listen(3000, () => {
+//     console.log("Servidor rodando em http://localhost:3000");
+// });

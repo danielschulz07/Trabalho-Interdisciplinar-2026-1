@@ -1,18 +1,18 @@
 import { Request, Response } from "express";
-import { Service } from "../services/Service";
+import { BiomaService } from "../services/BiomaService";
 import { Bioma } from "../models/Bioma.js";
 import { IPesquisavel } from "../models/IPesquisavel.js";
 
 export class BiomaController {
     _vetBiomas: Array<Bioma> = [];
 
-    static async inserir(req: Request, res: Response) {
+    /*static async inserir(req: Request, res: Response) {
 
         console.log("Entrou no Controller");
 
         try {
 
-            await Service.inserirBiomasAPI();
+            await BiomaService.inserirBiomasAPI();
 
             console.log("Service finalizado");
 
@@ -29,26 +29,29 @@ export class BiomaController {
             });
 
         }
+    }*/
+
+    static async getBiomas(reg: Request, res: Response){
+        await BiomaService.getBiomas();
+        return res.json({mensagem: "teste"});
+
+        // try {
+
+        //     const response = await Service.selecionarTodosBiomas();
+        //     return response;
+
+        // } catch(e: any) {
+
+        //     return "Erro ao tentar listar dados: " + e.message;
+
+        // }
     }
 
-    static async listar(){
-        try {
-
-            const response = await Service.selecionarTodosBiomas();
-            return response;
-
-        } catch(e: any) {
-
-            return "Erro ao tentar listar dados: " + e.message;
-
-        }
-    }
-
-    static async mostrar(bioma: Bioma){
+    /*static async mostrar(bioma: Bioma){
         try {
 
             console.log("Bioma Controller: mostrando bioma");
-            const response = await Service.selecionarBioma(bioma.nome);
+            const response = await BiomaService.selecionarBioma(bioma.nome);
             return response;
 
         } catch(e: any) {
@@ -57,13 +60,13 @@ export class BiomaController {
 
         }
         
-    }
+    }*/
 
-    static async atualizar(nomeBioma: string, coluna: string, valor: string){
+    /*static async atualizar(nomeBioma: string, coluna: string, valor: string){
         try {
 
             console.log("Bioma Controller: atualizando bioma");
-            const response = await Service.atualizarBioma(nomeBioma, coluna, valor);
+            const response = await BiomaService.atualizarBioma(nomeBioma, coluna, valor);
             if(response == null){
                 throw new Error("Não foi possível atualizar o bioma.");
             }
@@ -75,13 +78,13 @@ export class BiomaController {
 
         }
         
-    }
+    }*/
 
-    static async deletar(nomeBioma: string){
+    /*static async deletar(nomeBioma: string){
         try {
 
             console.log("Bioma Controller: deletando bioma");
-            const response = await Service.deletarBioma(nomeBioma);
+            const response = await BiomaService.deletarBioma(nomeBioma);
             if(!response){
                 throw new Error("Não foi possível deletar o bioma.");
             }
@@ -92,7 +95,7 @@ export class BiomaController {
             return e.message;
 
         }
-    }
+    }*/
 
     public pesquisarPorCriterio(criterio: string): Array<IPesquisavel>{
         return this._vetBiomas.filter(b => b.atendeCriterio(criterio));
