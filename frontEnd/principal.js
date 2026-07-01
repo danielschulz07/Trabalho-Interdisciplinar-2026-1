@@ -5,14 +5,29 @@ const rotas = {
     "/": () => {
         const root = document.createElement('div-main');
 
+        const img = document.createElement('img');
+        img.classList.add('home-gif');
+        img.src = "https://c.tenor.com/6mvbG8J7-EgAAAAd/tenor.gif";
+        img.alt = "Minecraft";
+
+        const overlay = document.createElement('div');
+        overlay.classList.add('home-overlay');
+
+        const texto = document.createElement('div');
+        texto.classList.add('home-texto');
+
         const h1 = document.createElement('h1');
         h1.textContent = "Bem-vindo ao Astroworld!";
 
         const p = document.createElement('p');
         p.textContent = "Explore o universo do Minecraft e descubra os biomas e mobs que habitam esse mundo incrível!!";
 
-        root.appendChild(h1);
-        root.appendChild(p);
+        texto.appendChild(h1);
+        texto.appendChild(p);
+
+        root.appendChild(img);
+        root.appendChild(overlay);
+        root.appendChild(texto);
 
         return root;
     },

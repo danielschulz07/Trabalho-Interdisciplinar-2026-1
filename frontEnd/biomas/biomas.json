@@ -1,328 +1,328 @@
 {
   "overworld": [
     {
-        "id": "plains",
-        "name": "Plains",
-        "image": "https://minecraft.wiki/images/thumb/Plains.png/500px-Plains.png?38132"
+      "id": "plains",
+      "image": "https://minecraft.wiki/images/thumb/Plains.png/500px-Plains.png?38132",
+      "description": "Um bioma amplo e plano coberto por grama. É um dos melhores locais para iniciar uma sobrevivência graças à abundância de animais, flores e vilas. Possui poucas árvores, mas oferece muito espaço para construções."
     },
     {
-        "id": "sunflower_plains",
-        "name": "Sunflower Plains",
-        "image": "https://minecraft.wiki/images/thumb/Sunflower_Plains.png/500px-Sunflower_Plains.png?4049f"
+      "id": "sunflower_plains",
+      "image": "https://minecraft.wiki/images/thumb/Sunflower_Plains.png/500px-Sunflower_Plains.png?4049f",
+      "description": "Uma variação rara das Planícies, caracterizada por enormes campos de girassóis. Compartilha as mesmas características do bioma original, mas oferece uma paisagem muito mais colorida."
     },
     {
-        "id": "forest",
-        "name": "Forest",
-        "image": "https://minecraft.wiki/images/thumb/Forest.png/500px-Forest.png?536a7"
+      "id": "forest",
+      "image": "https://minecraft.wiki/images/thumb/Forest.png/500px-Forest.png?536a7",
+      "description": "Uma floresta repleta de carvalhos e bétulas. É excelente para coletar madeira logo no início do jogo e costuma abrigar diversos animais passivos."
     },
     {
-        "id": "flower_forest",
-        "name": "Flower Forest",
-        "image": "https://minecraft.wiki/images/thumb/Flower_Forest.png/500px-Flower_Forest.png?d85ec"
+      "id": "flower_forest",
+      "image": "https://minecraft.wiki/images/thumb/Flower_Forest.png/500px-Flower_Forest.png?d85ec",
+      "description": "Uma floresta extremamente colorida, coberta por praticamente todas as flores do jogo. É o melhor lugar para coletar corantes e encontrar abelhas."
     },
     {
-        "id": "birch_forest",
-        "name": "Birch Forest",
-        "image": "https://minecraft.wiki/images/thumb/Birch_Forest.png/500px-Birch_Forest.png?4872e"
+      "id": "birch_forest",
+      "image": "https://minecraft.wiki/images/thumb/Birch_Forest.png/500px-Birch_Forest.png?4872e",
+      "description": "Uma floresta formada quase inteiramente por bétulas. Fornece bastante madeira clara e possui uma aparência limpa e organizada."
     },
     {
-        "id": "old_growth_birch_forest",
-        "name": "Old Growth Birch Forest",
-        "image": "https://minecraft.wiki/images/thumb/Old_Growth_Birch_Forest.png/500px-Old_Growth_Birch_Forest.png?f2c15"
+      "id": "old_growth_birch_forest",
+      "image": "https://minecraft.wiki/images/thumb/Old_Growth_Birch_Forest.png/500px-Old_Growth_Birch_Forest.png?f2c15",
+      "description": "Uma versão antiga da Floresta de Bétulas, com árvores muito mais altas. É rica em madeira e possui vegetação abundante."
     },
     {
-        "id": "dark_forest",
-        "name": "Dark Forest",
-        "image": "https://minecraft.wiki/images/thumb/Dark_Forest.png/500px-Dark_Forest.png?6058b"
+      "id": "dark_forest",
+      "image": "https://minecraft.wiki/images/thumb/Dark_Forest.png/500px-Dark_Forest.png?6058b",
+      "description": "Uma floresta densa formada por carvalhos escuros e cogumelos gigantes. A pouca iluminação favorece o surgimento de monstros mesmo durante o dia."
     },
     {
-        "id": "taiga",
-        "name": "Taiga",
-        "image": "https://minecraft.wiki/images/thumb/Taiga.png/500px-Taiga.png?d3a69"
+      "id": "taiga",
+      "image": "https://minecraft.wiki/images/thumb/Taiga.png/500px-Taiga.png?d3a69",
+      "description": "Um bioma frio coberto por pinheiros. Lobos, raposas e aldeias podem ser encontrados por aqui, além de uma grande quantidade de madeira."
     },
     {
-        "id": "old_growth_pine_taiga",
-        "name": "Old Growth Pine Taiga",
-        "image": "https://minecraft.wiki/images/thumb/Old_Growth_Pine_Taiga.png/500px-Old_Growth_Pine_Taiga.png?adba8"
+      "id": "old_growth_pine_taiga",
+      "image": "https://minecraft.wiki/images/thumb/Old_Growth_Pine_Taiga.png/500px-Old_Growth_Pine_Taiga.png?adba8",
+      "description": "Uma Taiga composta por enormes pinheiros antigos. Possui grandes quantidades de musgo, samambaias e blocos naturais."
     },
     {
-        "id": "old_growth_spruce_taiga",
-        "name": "Old Growth Spruce Taiga",
-        "image": "https://minecraft.wiki/images/thumb/Old_Growth_Spruce_Taiga.png/500px-Old_Growth_Spruce_Taiga.png?d5ff3"
+      "id": "old_growth_spruce_taiga",
+      "image": "https://minecraft.wiki/images/thumb/Old_Growth_Spruce_Taiga.png/500px-Old_Growth_Spruce_Taiga.png?d5ff3",
+      "description": "Semelhante à Taiga de Pinheiros Antigos, mas dominada por enormes abetos. É um excelente local para obter grandes quantidades de madeira."
     },
     {
-        "id": "meadow",
-        "name": "Meadow",
-        "image": "https://minecraft.wiki/images/thumb/Meadow.png/500px-Meadow.png?ca259"
+      "id": "meadow",
+      "image": "https://minecraft.wiki/images/thumb/Meadow.png/500px-Meadow.png?ca259",
+      "description": "Uma bela campina localizada nas montanhas. É coberta por flores, gramíneas e oferece belas paisagens para construções."
     },
     {
-        "id": "cherry_grove",
-        "name": "Cherry Grove",
-        "image": "https://minecraft.wiki/images/thumb/Cherry_Grove.png/500px-Cherry_Grove.png?72fbb"
+      "id": "cherry_grove",
+      "image": "https://minecraft.wiki/images/thumb/Cherry_Grove.png/500px-Cherry_Grove.png?72fbb",
+      "description": "Um bioma montanhoso coberto por cerejeiras de folhas rosadas. É um dos biomas mais bonitos do jogo e ideal para construções decorativas."
     },
     {
-        "id": "swamp",
-        "name": "Swamp",
-        "image": "https://minecraft.wiki/images/thumb/Swamp.png/500px-Swamp.png?1581b"
+      "id": "swamp",
+      "image": "https://minecraft.wiki/images/thumb/Swamp.png/500px-Swamp.png?1581b",
+      "description": "Uma região pantanosa cheia de água rasa, lírios e árvores retorcidas. É o habitat natural de sapos e um dos poucos lugares onde Slimes podem surgir durante a noite."
     },
     {
-        "id": "mangrove_swamp",
-        "name": "Mangrove Swamp",
-        "image": "https://minecraft.wiki/images/thumb/Mangrove_Swamp.png/500px-Mangrove_Swamp.png?49200"
+      "id": "mangrove_swamp",
+      "image": "https://minecraft.wiki/images/thumb/Mangrove_Swamp.png/500px-Mangrove_Swamp.png?49200",
+      "description": "Um pântano dominado por manguezais, raízes expostas e blocos de lama. É o lar dos sapos e apresenta uma vegetação única."
     },
     {
-        "id": "river",
-        "name": "River",
-        "image": "https://minecraft.wiki/images/thumb/River.png/500px-River.png?6a591"
+      "id": "river",
+      "image": "https://minecraft.wiki/images/thumb/River.png/500px-River.png?6a591",
+      "description": "Cursos de água doce que atravessam diversos biomas. São ideais para pesca, transporte e obtenção de argila."
     },
     {
-        "id": "frozen_river",
-        "name": "Frozen River",
-        "image": "https://minecraft.wiki/images/thumb/Frozen_River.png/500px-Frozen_River.png?7a808"
+      "id": "frozen_river",
+      "image": "https://minecraft.wiki/images/thumb/Frozen_River.png/500px-Frozen_River.png?7a808",
+      "description": "Uma versão congelada dos rios comuns. Sua superfície é coberta por gelo durante todo o ano."
     },
     {
-        "id": "snowy_plains",
-        "name": "Snowy Plains",
-        "image": "https://minecraft.wiki/images/thumb/Snowy_Plains.png/500px-Snowy_Plains.png?2fcbb"
+      "id": "snowy_plains",
+      "image": "https://minecraft.wiki/images/thumb/Snowy_Plains.png/500px-Snowy_Plains.png?2fcbb",
+      "description": "Planícies permanentemente cobertas por neve. São frias, abertas e podem conter vilas nevadas."
     },
     {
-        "id": "ice_spikes",
-        "name": "Ice Spikes",
-        "image": "https://minecraft.wiki/images/thumb/Ice_Spikes.png/500px-Ice_Spikes.png?802d7"
+      "id": "ice_spikes",
+      "image": "https://minecraft.wiki/images/thumb/Ice_Spikes.png/500px-Ice_Spikes.png?802d7",
+      "description": "Um raro bioma gelado repleto de enormes pilares de gelo. Sua aparência única faz dele um dos biomas mais impressionantes do Overworld."
     },
     {
-        "id": "snowy_taiga",
-        "name": "Snowy Taiga",
-        "image": "https://minecraft.wiki/images/thumb/Snowy_Taiga.png/500px-Snowy_Taiga.png?515d6"
+      "id": "snowy_taiga",
+      "image": "https://minecraft.wiki/images/thumb/Snowy_Taiga.png/500px-Snowy_Taiga.png?515d6",
+      "description": "Uma Taiga coberta por neve, habitada por lobos e raposas árticas. Possui abundância de pinheiros."
     },
     {
-        "id": "snowy_beach",
-        "name": "Snowy Beach",
-        "image": "https://minecraft.wiki/images/thumb/Snowy_Beach.png/500px-Snowy_Beach.png?612dd"
+      "id": "snowy_beach",
+      "image": "https://minecraft.wiki/images/thumb/Snowy_Beach.png/500px-Snowy_Beach.png?612dd",
+      "description": "Uma praia fria localizada entre oceanos congelados e biomas nevados. A areia é substituída por neve e gelo."
     },
     {
-        "id": "frozen_ocean",
-        "name": "Frozen Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Frozen_Ocean.png/500px-Frozen_Ocean.png?3521a"
+      "id": "frozen_ocean",
+      "image": "https://minecraft.wiki/images/thumb/Frozen_Ocean.png/500px-Frozen_Ocean.png?3521a",
+      "description": "Um oceano parcialmente congelado, com grandes blocos de gelo flutuando sobre a água."
     },
     {
-        "id": "frozen_peaks",
-        "name": "Frozen Peaks",
-        "image": "https://minecraft.wiki/images/thumb/Frozen_Peaks.png/500px-Frozen_Peaks.png?579d0"
+      "id": "frozen_peaks",
+      "image": "https://minecraft.wiki/images/thumb/Frozen_Peaks.png/500px-Frozen_Peaks.png?579d0",
+      "description": "Altas montanhas completamente cobertas por neve e gelo. É um dos pontos mais elevados do Overworld."
     },
     {
-        "id": "jagged_peaks",
-        "name": "Jagged Peaks",
-        "image": "https://minecraft.wiki/images/thumb/Jagged_Peaks_1.18.png/500px-Jagged_Peaks_1.18.png?8e713"
+      "id": "jagged_peaks",
+      "image": "https://minecraft.wiki/images/thumb/Jagged_Peaks_1.18.png/500px-Jagged_Peaks_1.18.png?8e713",
+      "description": "Montanhas extremamente íngremes com picos rochosos e nevados. Oferecem paisagens impressionantes."
     },
     {
-        "id": "grove",
-        "name": "Grove",
-        "image": "https://minecraft.wiki/images/thumb/Grove.png/500px-Grove.png?41d49"
+      "id": "grove",
+      "image": "https://minecraft.wiki/images/thumb/Grove.png/500px-Grove.png?41d49",
+      "description": "Uma pequena floresta montanhosa coberta por neve. É um local tranquilo onde podem surgir coelhos e lobos."
     },
     {
-        "id": "snowy_slopes",
-        "name": "Snowy Slopes",
-        "image": "https://minecraft.wiki/images/thumb/Snowy_Slopes_1.18.png/500px-Snowy_Slopes_1.18.png?bab30"
+      "id": "snowy_slopes",
+      "image": "https://minecraft.wiki/images/thumb/Snowy_Slopes_1.18.png/500px-Snowy_Slopes_1.18.png?bab30",
+      "description": "Encostas cobertas por neve localizadas entre montanhas. Cabras costumam aparecer nesse bioma."
     },
     {
-        "id": "ocean",
-        "name": "Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Ocean.png/500px-Ocean.png?a4d44"
+      "id": "ocean",
+      "image": "https://minecraft.wiki/images/thumb/Ocean.png/500px-Ocean.png?a4d44",
+      "description": "O bioma oceânico mais comum do jogo. Pode conter naufrágios, ruínas oceânicas e uma grande variedade de peixes."
     },
     {
-        "id": "deep_ocean",
-        "name": "Deep Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Deep_Ocean.png/500px-Deep_Ocean.png?21c17"
+      "id": "deep_ocean",
+      "image": "https://minecraft.wiki/images/thumb/Deep_Ocean.png/500px-Deep_Ocean.png?21c17",
+      "description": "Uma versão muito mais profunda do oceano. Monumentos oceânicos são encontrados com frequência aqui."
     },
     {
-        "id": "warm_ocean",
-        "name": "Warm Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Warm_Ocean.png/500px-Warm_Ocean.png?4803d"
+      "id": "warm_ocean",
+      "image": "https://minecraft.wiki/images/thumb/Warm_Ocean.png/500px-Warm_Ocean.png?4803d",
+      "description": "Um oceano tropical de águas cristalinas, rico em recifes de coral, peixes tropicais e vida marinha."
     },
     {
-        "id": "lukewarm_ocean",
-        "name": "Lukewarm Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Lukewarm_Ocean.png/500px-Lukewarm_Ocean.png?38529"
+      "id": "lukewarm_ocean",
+      "image": "https://minecraft.wiki/images/thumb/Lukewarm_Ocean.png/500px-Lukewarm_Ocean.png?38529",
+      "description": "Um oceano de temperatura intermediária. Pode conter corais próximos às regiões mais quentes."
     },
     {
-        "id": "cold_ocean",
-        "name": "Cold Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Cold_Ocean.png/500px-Cold_Ocean.png?0d6f6"
+      "id": "cold_ocean",
+      "image": "https://minecraft.wiki/images/thumb/Cold_Ocean.png/500px-Cold_Ocean.png?0d6f6",
+      "description": "Águas frias onde é comum encontrar salmões e algumas formações de gelo próximas às áreas congeladas."
     },
     {
-        "id": "deep_lukewarm_ocean",
-        "name": "Deep Lukewarm Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Deep_Lukewarm_Ocean.png/500px-Deep_Lukewarm_Ocean.png?4ee37"
+      "id": "deep_lukewarm_ocean",
+      "image": "https://minecraft.wiki/images/thumb/Deep_Lukewarm_Ocean.png/500px-Deep_Lukewarm_Ocean.png?4ee37",
+      "description": "Uma versão profunda do oceano morno. Possui grandes ravinas submersas e abundante vida marinha."
     },
     {
-        "id": "deep_cold_ocean",
-        "name": "Deep Cold Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Deep_Cold_Ocean.png/500px-Deep_Cold_Ocean.png?451eb"
+      "id": "deep_cold_ocean",
+      "image": "https://minecraft.wiki/images/thumb/Deep_Cold_Ocean.png/500px-Deep_Cold_Ocean.png?451eb",
+      "description": "Um oceano frio e bastante profundo, frequentemente utilizado para a geração de monumentos oceânicos."
     },
     {
-        "id": "deep_frozen_ocean",
-        "name": "Deep Frozen Ocean",
-        "image": "https://minecraft.wiki/images/thumb/Deep_Frozen_Ocean.png/500px-Deep_Frozen_Ocean.png?348ea"
+      "id": "deep_frozen_ocean",
+      "image": "https://minecraft.wiki/images/thumb/Deep_Frozen_Ocean.png/500px-Deep_Frozen_Ocean.png?348ea",
+      "description": "A versão mais profunda dos oceanos congelados, cercada por enormes icebergs e águas geladas."
     },
     {
-        "id": "stony_peaks",
-        "name": "Stony Peaks",
-        "image": "https://minecraft.wiki/images/thumb/Stony_Peaks.png/500px-Stony_Peaks.png?e1b45"
+      "id": "stony_peaks",
+      "image": "https://minecraft.wiki/images/thumb/Stony_Peaks.png/500px-Stony_Peaks.png?e1b45",
+      "description": "Picos montanhosos compostos principalmente por pedra. São encontrados em grandes altitudes e possuem pouca vegetação."
     },
     {
-        "id": "desert",
-        "name": "Desert",
-        "image": "https://minecraft.wiki/images/thumb/Desert.png/500px-Desert.png?7674b"
+      "id": "desert",
+      "image": "https://minecraft.wiki/images/thumb/Desert.png/500px-Desert.png?7674b",
+      "description": "Um bioma extremamente quente coberto por areia. Abriga templos do deserto, poços e vilas, mas possui pouca vegetação."
     },
     {
-        "id": "savanna",
-        "name": "Savanna",
-        "image": "https://minecraft.wiki/images/thumb/Savanna.png/500px-Savanna.png?87338"
+      "id": "savanna",
+      "image": "https://minecraft.wiki/images/thumb/Savanna.png/500px-Savanna.png?87338",
+      "description": "Um bioma quente caracterizado por acácias e gramíneas altas. Possui relevo levemente acidentado e pode conter vilas."
     },
     {
-        "id": "savanna_plateau",
-        "name": "Savanna Plateau",
-        "image": "https://minecraft.wiki/images/thumb/Savanna_Plateau.png/500px-Savanna_Plateau.png?6db03"
+      "id": "savanna_plateau",
+      "image": "https://minecraft.wiki/images/thumb/Savanna_Plateau.png/500px-Savanna_Plateau.png?6db03",
+      "description": "Uma versão elevada da Savana, formada por grandes planaltos e penhascos. É ideal para construções com belas vistas."
     },
     {
-        "id": "windswept_savanna",
-        "name": "Windswept Savanna",
-        "image": "https://minecraft.wiki/images/thumb/Windswept_Savanna.png/500px-Windswept_Savanna.png?50f1a"
+      "id": "windswept_savanna",
+      "image": "https://minecraft.wiki/images/thumb/Windswept_Savanna.png/500px-Windswept_Savanna.png?50f1a",
+      "description": "Uma Savana extremamente montanhosa com formações rochosas incomuns e árvores inclinadas."
     },
     {
-        "id": "badlands",
-        "name": "Badlands",
-        "image": "https://minecraft.wiki/images/thumb/Badlands.png/500px-Badlands.png?ff7ed"
+      "id": "badlands",
+      "image": "https://minecraft.wiki/images/thumb/Badlands.png/500px-Badlands.png?ff7ed",
+      "description": "Conhecido pelas montanhas coloridas de terracota. É um dos melhores biomas para encontrar ouro e minas abandonadas expostas."
     },
     {
-        "id": "eroded_badlands",
-        "name": "Eroded Badlands",
-        "image": "https://minecraft.wiki/images/thumb/Eroded_Badlands.png/500px-Eroded_Badlands.png?9b06a"
+      "id": "eroded_badlands",
+      "image": "https://minecraft.wiki/images/thumb/Eroded_Badlands.png/500px-Eroded_Badlands.png?9b06a",
+      "description": "Uma variação impressionante das Badlands, marcada por enormes pilares de terracota esculpidos pela erosão."
     },
     {
-        "id": "wooded_badlands",
-        "name": "Wooded Badlands",
-        "image": "https://minecraft.wiki/images/thumb/Wooded_Badlands_Plateau.png/500px-Wooded_Badlands_Plateau.png?5f89d"
+      "id": "wooded_badlands",
+      "image": "https://minecraft.wiki/images/thumb/Wooded_Badlands_Plateau.png/500px-Wooded_Badlands_Plateau.png?5f89d",
+      "description": "Uma versão das Badlands onde árvores de carvalho crescem sobre os planaltos de terracota."
     },
     {
-        "id": "jungle",
-        "name": "Jungle",
-        "image": "https://minecraft.wiki/images/thumb/Jungle.png/500px-Jungle.png?86362"
+      "id": "jungle",
+      "image": "https://minecraft.wiki/images/thumb/Jungle.png/500px-Jungle.png?86362",
+      "description": "Uma floresta tropical extremamente densa, repleta de árvores gigantes, bambus, papagaios, pandas e templos escondidos."
     },
     {
-        "id": "bamboo_jungle",
-        "name": "Bamboo Jungle",
-        "image": "https://minecraft.wiki/images/thumb/Bamboo_Jungle.png/500px-Bamboo_Jungle.png?f0875"
+      "id": "bamboo_jungle",
+      "image": "https://minecraft.wiki/images/thumb/Bamboo_Jungle.png/500px-Bamboo_Jungle.png?f0875",
+      "description": "Uma região dominada por enormes florestas de bambu. É o habitat natural dos pandas."
     },
     {
-        "id": "sparse_jungle",
-        "name": "Sparse Jungle",
-        "image": "https://minecraft.wiki/images/thumb/Sparse_Jungle.png/500px-Sparse_Jungle.png?1cf42"
+      "id": "sparse_jungle",
+      "image": "https://minecraft.wiki/images/thumb/Sparse_Jungle.png/500px-Sparse_Jungle.png?1cf42",
+      "description": "Uma versão menos densa da Selva, com árvores mais espaçadas que facilitam a exploração."
     },
     {
-        "id": "lush_caves",
-        "name": "Lush Caves",
-        "image": "https://minecraft.wiki/images/thumb/Lush_Caves.png/500px-Lush_Caves.png?5eb3e"
+      "id": "lush_caves",
+      "image": "https://minecraft.wiki/images/thumb/Lush_Caves.png/500px-Lush_Caves.png?5eb3e",
+      "description": "Cavernas exuberantes cobertas por vegetação, musgo, bagas luminosas e árvores de azaleia. São um dos biomas subterrâneos mais bonitos do jogo."
     },
     {
-        "id": "dripstone_caves",
-        "name": "Dripstone Caves",
-        "image": "https://minecraft.wiki/images/thumb/Dripstone_Caves_Light.png/500px-Dripstone_Caves_Light.png?af3f8"
+      "id": "dripstone_caves",
+      "image": "https://minecraft.wiki/images/thumb/Dripstone_Caves_Light.png/500px-Dripstone_Caves_Light.png?af3f8",
+      "description": "Cavernas repletas de estalactites e estalagmites de dripstone. Exigem cuidado devido ao perigo de quedas."
     },
     {
-        "id": "deep_dark",
-        "name": "Deep Dark",
-        "image": "https://minecraft.wiki/images/thumb/Deep_Dark_Light.png/500px-Deep_Dark_Light.png?12f2a"
+      "id": "deep_dark",
+      "image": "https://minecraft.wiki/images/thumb/Deep_Dark_Light.png/500px-Deep_Dark_Light.png?12f2a",
+      "description": "Um bioma subterrâneo extremamente perigoso coberto por blocos de sculk. Abriga as Ancient Cities e o poderoso Warden."
     },
     {
-        "id": "pale_garden",
-        "name": "Pale Garden",
-        "image": "https://minecraft.wiki/images/thumb/Pale_Garden.png/500px-Pale_Garden.png?6ceae"
+      "id": "pale_garden",
+      "image": "https://minecraft.wiki/images/thumb/Pale_Garden.png/500px-Pale_Garden.png?6ceae",
+      "description": "Um misterioso bioma de floresta com vegetação clara e atmosfera silenciosa. Durante a noite torna-se ainda mais sombrio e perigoso."
     },
     {
-        "id": "beach",
-        "name": "Beach",
-        "image": "https://minecraft.wiki/images/thumb/Beach.png/500px-Beach.png?c198b"
+      "id": "beach",
+      "image": "https://minecraft.wiki/images/thumb/Beach.png/500px-Beach.png?c198b",
+      "description": "Faixas de areia que ligam oceanos e terra firme. É um excelente local para encontrar tartarugas."
     },
     {
-        "id": "stony_shore",
-        "name": "Stony Shore",
-        "image": "https://minecraft.wiki/images/thumb/Stony_Shore.png/500px-Stony_Shore.png?05b90"
+      "id": "stony_shore",
+      "image": "https://minecraft.wiki/images/thumb/Stony_Shore.png/500px-Stony_Shore.png?05b90",
+      "description": "Uma costa formada principalmente por pedra, normalmente encontrada ao lado de montanhas."
     },
     {
-        "id": "mushroom_fields",
-        "name": "Mushroom Fields",
-        "image": "https://minecraft.wiki/images/thumb/Mushroom_Fields.png/500px-Mushroom_Fields.png?8bcd9"
+      "id": "mushroom_fields",
+      "image": "https://minecraft.wiki/images/thumb/Mushroom_Fields.png/500px-Mushroom_Fields.png?8bcd9",
+      "description": "Um bioma extremamente raro coberto por micélio e cogumelos gigantes. Apenas Mooshrooms aparecem naturalmente e monstros hostis comuns não surgem."
     },
     {
-        "id": "windswept_hills",
-        "name": "Windswept Hills",
-        "image": "https://minecraft.wiki/images/thumb/Windswept_Hills.png/500px-Windswept_Hills.png?f6d08"
+      "id": "windswept_hills",
+      "image": "https://minecraft.wiki/images/thumb/Windswept_Hills.png/500px-Windswept_Hills.png?f6d08",
+      "description": "Montanhas íngremes com penhascos e grandes elevações. São ricas em carvão e ferro expostos."
     },
     {
-        "id": "windswept_gravelly_hills",
-        "name": "Windswept Gravelly Hills",
-        "image": "https://minecraft.wiki/images/thumb/Windswept_Gravelly_Hills.png/500px-Windswept_Gravelly_Hills.png?13893"
+      "id": "windswept_gravelly_hills",
+      "image": "https://minecraft.wiki/images/thumb/Windswept_Gravelly_Hills.png/500px-Windswept_Gravelly_Hills.png?13893",
+      "description": "Uma versão das montanhas onde grandes quantidades de cascalho cobrem as encostas."
     },
     {
-        "id": "windswept_forest",
-        "name": "Windswept Forest",
-        "image": "https://minecraft.wiki/images/thumb/Windswept_Forest.png/500px-Windswept_Forest.png?d0b62"
+      "id": "windswept_forest",
+      "image": "https://minecraft.wiki/images/thumb/Windswept_Forest.png/500px-Windswept_Forest.png?d0b62",
+      "description": "Uma floresta montanhosa onde as árvores crescem em terrenos inclinados, formando belas paisagens e oferecendo abundância de madeira."
     }
   ],
   "nether": [
     {
-      "id": "nether_wastes",
-      "name": "Nether Wastes",
-      "image": "https://minecraft.wiki/images/thumb/Nether_Wastes.png/500px-Nether_Wastes.png?8fd40"
-    },
-    {
-      "id": "soul_sand_valley",
-      "name": "Soul Sand Valley",
-      "image": "https://minecraft.wiki/images/thumb/Soul_Sand_Valley.png/500px-Soul_Sand_Valley.png?ef099"
-    },
-    {
-      "id": "crimson_forest",
-      "name": "Crimson Forest",
-      "image": "https://minecraft.wiki/images/thumb/Crimson_Forest.png/500px-Crimson_Forest.png?d15b9"
-    },
-    {
-      "id": "warped_forest",
-      "name": "Warped Forest",
-      "image": "https://minecraft.wiki/images/thumb/Warped_Forest.png/250px-Warped_Forest.png?782e4"
-    },
-    {
-      "id": "basalt_deltas",
-      "name": "Basalt Deltas",
-      "image": "https://minecraft.wiki/images/thumb/Basalt_Deltas.png/500px-Basalt_Deltas.png?3495b"
-    }
+    "id": "nether_wastes",
+    "image": "https://minecraft.wiki/images/thumb/Nether_Wastes.png/500px-Nether_Wastes.png?8fd40",
+    "description": "O bioma mais comum do Nether. É composto principalmente por Netherrack e abriga Ghasts, Piglins, Zombified Piglins, cubos de magma e diversas fortalezas do Nether."
+  },
+  {
+    "id": "soul_sand_valley",
+    "image": "https://minecraft.wiki/images/thumb/Soul_Sand_Valley.png/500px-Soul_Sand_Valley.png?ef099",
+    "description": "Um vale coberto por Soul Sand e Soul Soil. O terreno reduz a velocidade dos jogadores e a grande quantidade de esqueletos e Ghasts torna este um dos biomas mais perigosos do Nether."
+  },
+  {
+    "id": "crimson_forest",
+    "image": "https://minecraft.wiki/images/thumb/Crimson_Forest.png/500px-Crimson_Forest.png?d15b9",
+    "description": "Uma floresta de tons vermelhos dominada por enormes fungos. É o habitat natural dos Piglins e Hoglins, além de fornecer diversos recursos exclusivos do Nether."
+  },
+  {
+    "id": "warped_forest",
+    "image": "https://minecraft.wiki/images/thumb/Warped_Forest.png/250px-Warped_Forest.png?782e4",
+    "description": "Uma floresta azul-esverdeada considerada um dos locais mais seguros do Nether. Poucos monstros hostis aparecem naturalmente, tornando-a ideal para exploração."
+  },
+  {
+    "id": "basalt_deltas",
+    "image": "https://minecraft.wiki/images/thumb/Basalt_Deltas.png/500px-Basalt_Deltas.png?3495b",
+    "description": "Um bioma vulcânico formado por basalto, pedra-negra e rios de lava. Cubos de Magma aparecem em grande quantidade e o terreno é extremamente acidentado."
+  }
   ],
   "end": [
     {
-      "id": "the_end",
-      "name": "The End",
-      "image": "https://minecraft.wiki/images/thumb/The_End.png/300px-The_End.png?331b5"
-    },
-    {
-      "id": "small_end_islands",
-      "name": "Small End Islands",
-      "image": "https://minecraft.wiki/images/thumb/Small_End_Islands.png/250px-Small_End_Islands.png?20554"
-    },
-    {
-      "id": "end_midlands",
-      "name": "End Midlands",
-      "image": "https://minecraft.wiki/images/thumb/End_Midlands.png/250px-End_Midlands.png?8541a"
-    },
-    {
-      "id": "end_highlands",
-      "name": "End Highlands",
-      "image": "https://minecraft.wiki/images/thumb/End_Highlands.png/250px-End_Highlands.png?b5640"
-    },
-    {
-      "id": "end_barrens",
-      "name": "End Barrens",
-      "image": "https://minecraft.wiki/images/thumb/End_Barrens.png/250px-End_Barrens.png?f4740"
-    }
+    "id": "the_end",
+    "image": "https://minecraft.wiki/images/thumb/The_End.png/300px-The_End.png?331b5",
+    "description": "A ilha central do End, onde acontece a batalha contra o Dragão do End. É composta principalmente por End Stone e serve como ponto inicial da dimensão."
+  },
+  {
+    "id": "small_end_islands",
+    "image": "https://minecraft.wiki/images/thumb/Small_End_Islands.png/250px-Small_End_Islands.png?20554",
+    "description": "Pequenas ilhas isoladas espalhadas pelo vazio do End. São compostas quase exclusivamente por End Stone e conectam regiões mais distantes da dimensão."
+  },
+  {
+    "id": "end_midlands",
+    "image": "https://minecraft.wiki/images/thumb/End_Midlands.png/250px-End_Midlands.png?8541a",
+    "description": "Regiões de transição entre as End Highlands e outros biomas do End. Possuem terreno relativamente plano e pouca vegetação."
+  },
+  {
+    "id": "end_highlands",
+    "image": "https://minecraft.wiki/images/thumb/End_Highlands.png/250px-End_Highlands.png?b5640",
+    "description": "Grandes ilhas onde podem ser encontradas as Cidades do End e os Navios do End. É o principal local para obter Elytras e equipamentos avançados."
+  },
+  {
+    "id": "end_barrens",
+    "image": "https://minecraft.wiki/images/thumb/End_Barrens.png/250px-End_Barrens.png?f4740",
+    "description": "As bordas das grandes ilhas do End. Geralmente são áreas vazias e servem como transição para o enorme vazio da dimensão."
+  }
   ]
 }

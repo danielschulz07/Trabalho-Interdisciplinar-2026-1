@@ -2,299 +2,240 @@
   "passive": [
     {
       "id": "cow",
-      "name": "Cow",
       "url_imagem": "https://minecraft.wiki/images/thumb/Cow_JE7_BE4.png/150px-Cow_JE7_BE4.png?3de94"
     },
     {
       "id": "sheep",
-      "name": "Sheep",
       "url_imagem": "https://minecraft.wiki/images/thumb/White_Sheep_JE5.png/514px-White_Sheep_JE5.png?a5000&20250410194429"
     },
     {
       "id": "pig",
-      "name": "Pig",
       "url_imagem": "https://minecraft.wiki/images/thumb/Temperate_Pig_JE4_BE2.png/150px-Temperate_Pig_JE4_BE2.png?c550c"
     },
     {
       "id": "chicken",
-      "name": "Chicken",
       "url_imagem": "https://minecraft.wiki/images/thumb/Chicken_JE2_BE2.png/150px-Chicken_JE2_BE2.png?30245"
     },
     {
       "id": "horse",
-      "name": "Horse",
       "url_imagem": "https://minecraft.wiki/images/thumb/White_Horse.png/150px-White_Horse.png?f3f6e"
     },
     {
       "id": "donkey",
-      "name": "Donkey",
       "url_imagem": "https://minecraft.wiki/images/thumb/Donkey_JE5.png/150px-Donkey_JE5.png?9e2a1"
     },
     {
       "id": "mule",
-      "name": "Mule",
       "url_imagem": "https://minecraft.wiki/images/thumb/Mule_JE5.png/150px-Mule_JE5.png?3c1f0"
     },
     {
       "id": "rabbit",
-      "name": "Rabbit",
       "url_imagem": "https://minecraft.wiki/images/thumb/Brown_Rabbit_BE4.png/150px-Brown_Rabbit_BE4.png?235b9"
     },
     {
       "id": "mooshroom",
-      "name": "Mooshroom",
       "url_imagem": "https://minecraft.wiki/images/thumb/Red_Mooshroom_JE5_BE3.png/150px-Red_Mooshroom_JE5_BE3.png?de6c9"
     },
     {
       "id": "squid",
-      "name": "Squid",
       "url_imagem": "https://minecraft.wiki/images/thumb/Squid_JE2_BE2.gif/150px-Squid_JE2_BE2.gif?8a4c4"
     },
     {
       "id": "glow_squid",
-      "name": "Glow Squid",
       "url_imagem": "https://minecraft.wiki/images/thumb/Glow_Squid_JE1.gif/150px-Glow_Squid_JE1.gif?dcad8"
     },
     {
       "id": "turtle",
-      "name": "Turtle",
       "url_imagem": "https://minecraft.wiki/images/thumb/Turtle_JE3_BE1.png/200px-Turtle_JE3_BE1.png?373f9"
     },
     {
       "id": "fox",
-      "name": "Fox",
       "url_imagem": "https://minecraft.wiki/images/thumb/Fox_JE1_BE1.png/150px-Fox_JE1_BE1.png?ebd36"
     },
     {
       "id": "panda",
-      "name": "Panda",
       "url_imagem": "https://minecraft.wiki/images/thumb/Panda_JE1_BE1.png/180px-Panda_JE1_BE1.png?31d00"
     },
     {
       "id": "ocelot",
-      "name": "Ocelot",
       "url_imagem": "https://minecraft.wiki/images/thumb/Ocelot_JE2_BE2.png/150px-Ocelot_JE2_BE2.png?7d798"
     },
     {
       "id": "parrot",
-      "name": "Parrot",
       "url_imagem": "https://minecraft.wiki/images/thumb/Red_Parrot_JE1_BE1.png/150px-Red_Parrot_JE1_BE1.png?90904"
     },
     {
       "id": "bat",
-      "name": "Bat",
       "url_imagem": "https://minecraft.wiki/images/thumb/Bat_JE4_BE3.gif/150px-Bat_JE4_BE3.gif?db68c"
     },
     {
       "id": "cod",
-      "name": "Cod",
       "url_imagem": "https://minecraft.wiki/images/thumb/Cod.gif/150px-Cod.gif?fe8d7"
     },
     {
       "id": "salmon",
-      "name": "Salmon",
       "url_imagem": "https://minecraft.wiki/images/thumb/Salmon.gif/150px-Salmon.gif?cb24f"
     },
     {
       "id": "tropical_fish",
-      "name": "Tropical Fish",
       "url_imagem": "https://minecraft.wiki/images/thumb/Ornate_Butterfly.png/150px-Ornate_Butterfly.png?a20be"
     },
     {
       "id": "pufferfish",
-      "name": "Pufferfish",
       "url_imagem": "https://minecraft.wiki/images/thumb/Pufferfish_large.gif/150px-Pufferfish_large.gif?bec50"
     },
     {
       "id": "axolotl",
-      "name": "Axolotl",
       "url_imagem": "https://minecraft.wiki/images/thumb/Blue_Axolotl_Idle_Floor_Underwater.gif/200px-Blue_Axolotl_Idle_Floor_Underwater.gif?2b77f"
     },
     {
       "id": "frog",
-      "name": "Frog",
       "url_imagem": "https://minecraft.wiki/images/thumb/Temperate_Frog_JE1_BE1.gif/150px-Temperate_Frog_JE1_BE1.gif?5a0ff"
     },
     {
       "id": "tadpole",
-      "name": "Tadpole",
       "url_imagem": "https://minecraft.wiki/images/thumb/Tadpole_JE1.png/150px-Tadpole_JE1.png?94313"
     },
     {
       "id": "camel",
-      "name": "Camel",
       "url_imagem": "https://minecraft.wiki/images/thumb/Camel_Idle.gif/200px-Camel_Idle.gif?72667"
     },
     {
       "id": "sniffer",
-      "name": "Sniffer",
       "url_imagem": "https://minecraft.wiki/images/thumb/Sniffer_sniffsniff.gif/200px-Sniffer_sniffsniff.gif?36ccd"
     },
     {
       "id": "armadillo",
-      "name": "Armadillo",
       "url_imagem": "https://minecraft.wiki/images/thumb/Armadillo_JE2_BE2.png/150px-Armadillo_JE2_BE2.png?9cdf1"
     },
     {
       "id": "allay",
-      "name": "Allay",
       "url_imagem": "https://minecraft.wiki/images/thumb/Allay_JE2_BE2.gif/150px-Allay_JE2_BE2.gif?aca63"
     },
     {
       "id": "cat",
-      "name": "Cat",
       "url_imagem": "https://minecraft.wiki/images/thumb/Tuxedo_Cat_JE2_BE2.png/150px-Tuxedo_Cat_JE2_BE2.png?311fe"
     },
     {
       "id": "snow_golem",
-      "name": "Snow Golem",
       "url_imagem": "https://minecraft.wiki/images/thumb/Snow_Golem_JE2_BE2.png/150px-Snow_Golem_JE2_BE2.png?23125"
     },
     {
       "id": "strider",
-      "name": "Strider",
       "url_imagem": "https://minecraft.wiki/images/thumb/Strider_JE2_BE2.gif/150px-Strider_JE2_BE2.gif?f8244"
     },
     {
       "id": "wandering_trader",
-      "name": "Wandering Trader",
       "url_imagem": "https://minecraft.wiki/images/thumb/Wandering_Trader_JE1_BE1.png/135px-Wandering_Trader_JE1_BE1.png?309b9"
     }
   ],
   "hostile": [
     {
       "id": "zombie",
-      "name": "Zombie",
       "url_imagem": "https://minecraft.wiki/images/thumb/Zombie_JE5_BE2.png/150px-Zombie_JE5_BE2.png?c5423"
     },
     {
       "id": "skeleton",
-      "name": "Skeleton",
       "url_imagem": "https://minecraft.wiki/images/thumb/Lefthandedskeleton.png/100px-Lefthandedskeleton.png?2221f"
     },
     {
       "id": "creeper",
-      "name": "Creeper",
       "url_imagem": "https://minecraft.wiki/images/thumb/Creeper_JE3_BE1.png/128px-Creeper_JE3_BE1.png?dc7b2"
     },
     {
       "id": "witch",
-      "name": "Witch",
       "url_imagem": "https://minecraft.wiki/images/thumb/Witch_JE3.png/100px-Witch_JE3.png?aeb30"
     },
     {
       "id": "slime",
-      "name": "Slime",
       "url_imagem": "https://minecraft.wiki/images/thumb/Slime_JE3_BE2.png/150px-Slime_JE3_BE2.png?5b6a7"
     },
     {
       "id": "magma_cube",
-      "name": "Magma Cube",
       "url_imagem": "https://minecraft.wiki/images/thumb/Magma_Cube_JE2_BE2.png/150px-Magma_Cube_JE2_BE2.png?dc507"
     },
     {
       "id": "phantom",
-      "name": "Phantom",
       "url_imagem": "https://minecraft.wiki/images/thumb/Phantom_JE2.gif/150px-Phantom_JE2.gif?ed906"
     },
     {
       "id": "drowned",
-      "name": "Drowned",
       "url_imagem": "https://minecraft.wiki/images/thumb/Drowned_JE2.png/132px-Drowned_JE2.png?408ba"
     },
     {
       "id": "husk",
-      "name": "Husk",
       "url_imagem": "https://minecraft.wiki/images/thumb/Husk_JE4_BE2.png/150px-Husk_JE4_BE2.png?a6767"
     },
     {
       "id": "stray",
-      "name": "Stray",
       "url_imagem": "https://minecraft.wiki/images/thumb/Stray_JE2_BE4.png/100px-Stray_JE2_BE4.png?ef82d"
     },
     {
       "id": "blaze",
-      "name": "Blaze",
       "url_imagem": "https://minecraft.wiki/images/Blaze_BE3.gif?b08d8"
     },
     {
       "id": "ghast",
-      "name": "Ghast",
       "url_imagem": "https://minecraft.wiki/images/thumb/Ghast_JE3_BE3.gif/240px-Ghast_JE3_BE3.gif?ae9fb"
     },
     {
       "id": "wither_skeleton",
-      "name": "Wither Skeleton",
       "url_imagem": "https://minecraft.wiki/images/thumb/Wither_Skeleton_JE4_BE3.png/150px-Wither_Skeleton_JE4_BE3.png?9c107"
     },
     {
       "id": "piglin_brute",
-      "name": "Piglin Brute",
       "url_imagem": "https://minecraft.wiki/images/thumb/Piglin_Brute_JE1.png/150px-Piglin_Brute_JE1.png?5d4a0"
     },
     {
       "id": "hoglin",
-      "name": "Hoglin",
       "url_imagem": "https://minecraft.wiki/images/thumb/Hoglin_JE3.png/250px-Hoglin_JE3.png?65eaa"
     },
     {
       "id": "zoglin",
-      "name": "Zoglin",
       "url_imagem": "https://minecraft.wiki/images/thumb/Zoglin_JE1.png/250px-Zoglin_JE1.png?6fd4b"
     },
     {
       "id": "ravager",
-      "name": "Ravager",
       "url_imagem": "https://minecraft.wiki/images/thumb/Ravager_JE1.png/150px-Ravager_JE1.png?55aae"
     },
     {
       "id": "vex",
-      "name": "Vex",
       "url_imagem": "https://minecraft.wiki/images/thumb/Vex_JE4.gif/150px-Vex_JE4.gif?da166"
     },
     {
       "id": "evoker",
-      "name": "Evoker",
       "url_imagem": "https://minecraft.wiki/images/thumb/Evoker_JE3.png/100px-Evoker_JE3.png?54321"
     },
     {
       "id": "vindicator",
-      "name": "Vindicator",
       "url_imagem": "https://minecraft.wiki/images/thumb/Vindicator_JE3_BE3.png/150px-Vindicator_JE3_BE3.png?3185f"
     },
     {
       "id": "pillager",
-      "name": "Pillager",
       "url_imagem": "https://minecraft.wiki/images/thumb/Pillager_JE3.png/150px-Pillager_JE3.png?22662"
     },
     {
       "id": "guardian",
-      "name": "Guardian",
       "url_imagem": "https://minecraft.wiki/images/thumb/Guardian_JE2_BE2.gif/150px-Guardian_JE2_BE2.gif?19e5a"
     },
     {
       "id": "silverfish",
-      "name": "Silverfish",
       "url_imagem": "https://minecraft.wiki/images/thumb/Silverfish_JE1_BE1.gif/200px-Silverfish_JE1_BE1.gif?d40a7"
     },
     {
       "id": "endermite",
-      "name": "Endermite",
       "url_imagem": "https://minecraft.wiki/images/thumb/Endermite.gif/200px-Endermite.gif?920c2"
     },
     {
       "id": "shulker",
-      "name": "Shulker",
       "url_imagem": "https://minecraft.wiki/images/thumb/Shulker_JE1_BE1.png/150px-Shulker_JE1_BE1.png?02a87"
     },
     {
       "id": "breeze",
-      "name": "Breeze",
       "url_imagem": "https://minecraft.wiki/images/thumb/Breeze_BE1_JE2.webp/150px-Breeze_BE1_JE2.webp?87e5c"
     },
     {
       "id": "bogged",
-      "name": "Bogged",
       "url_imagem": "https://minecraft.wiki/images/thumb/Bogged_JE2_BE2.png/100px-Bogged_JE2_BE2.png?55cb9"
     }
   ]

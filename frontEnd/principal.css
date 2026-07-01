@@ -74,27 +74,66 @@ nav a:hover {
 
 /* HOME */
 div-main {
-    padding: 80px 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 480px;
+    overflow: hidden;
+}
+
+div-main .home-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+div-main .home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(15, 25, 35, 0.3) 0%, rgba(15, 25, 35, 0.85) 100%);
+}
+
+div-main .home-texto {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
     text-align: center;
-    display: block;
+    padding: 0 20px;
 }
 
 div-main h1 {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 900;
     letter-spacing: 4px;
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 16px;
-    text-shadow: 0 0 30px rgba(74, 158, 255, 0.3);
+    text-shadow: 0 0 30px rgba(74, 158, 255, 0.6), 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 div-main p {
     font-size: 15px;
-    color: #8ba3b0;
-    max-width: 600px;
-    margin: 0 auto;
+    color: #d4dee6;
     line-height: 1.6;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    div-main {
+        min-height: 360px;
+    }
+
+    div-main h1 {
+        font-size: 32px;
+    }
 }
 
 /* FOOTER */
