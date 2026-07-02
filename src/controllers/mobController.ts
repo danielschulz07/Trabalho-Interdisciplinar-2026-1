@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Service } from "../services/Service";
+import { MobService } from "../services/MobService";
 import { Mob } from "../models/Mob";
 import { IPesquisavel } from "../models/IPesquisavel.js";
 

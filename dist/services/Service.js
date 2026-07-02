@@ -1,11 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Service = void 0;
+exports.MobService = void 0;
 const consumoAPI_1 = require("../models/consumoAPI");
 const Repository_1 = require("../repositories/Repository");
-class Service {
-    static async inserirMobsAPI() {
-        console.log("Entrou no Service");
+class MobService {
+    static async inserirMob() {
         const response = await consumoAPI_1.consumoAPI.consultaMob("");
         for (const mob of response.data) {
             await Repository_1.Repository.inserirMob(mob.id_bioma, mob.name, mob.life, mob.type);
@@ -68,5 +67,5 @@ class Service {
         return resposta;
     }
 }
-exports.Service = Service;
+exports.MobService = MobService;
 //# sourceMappingURL=Service.js.map

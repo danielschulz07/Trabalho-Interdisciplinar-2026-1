@@ -1,15 +1,13 @@
 import express from "express";
 import * as dotenv from "dotenv";
-import { MobController } from "./controllers/mobController";
-import { BiomaController } from "./controllers/biomaController";
-import { Service } from "./services/Service";
-import { testConnection } from './config/db';
+//import { MobController } from "./controllers/mobController";
+//import { BiomaController } from "./controllers/biomaController";
 import mobRoutes from './routes/mobRoutes';
 import biomaRoutes from './routes/biomaRoutes';
-
+import { testConnection } from './config/db';
+//import { Service } from "./services/Service";
 
 //dotenv.config();
-
 const app = express();
 const PORT: number = Number(process.env.PORT) || 3000;
 
